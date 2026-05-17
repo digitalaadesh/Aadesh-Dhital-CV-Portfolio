@@ -1,0 +1,3259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aadesh Dhital — Digital Marketing Executive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* ── DARK MODE PALETTE (Victor-style) ── */
+  --cream:        #1A2A46;        /* Main dark navy background       */
+  --cream2:       #1F1E33;        /* Deeper panel / alt sections     */
+  --white:        #212d42;        /* Dark card background           */        /* Primary text & card surfaces    */
+  --ink:          #ffffff;        /* Matte white — headings          */
+  --ink2:         #d0d8e8;        /* Soft white — body text          */
+  --muted:        #8892a4;        /* Muted grey labels               */
+  --border:       rgba(255,255,255,0.10); /* Subtle border           */
+  --orange:       #FF33AA;        /* Hot pink/magenta CTA accent     */
+  --orange-light: rgba(255,51,170,0.12);  /* Pink tint background    */
+  --accent:       #B0B7C3;        /* Cool grey accent                */
+  --accent-light: rgba(176,183,195,0.1);
+  --green:        #2d6a4f;
+  --green-light:  rgba(45,106,79,0.2);
+  --blue:         #B0B7C3;
+  --blue-light:   rgba(176,183,195,0.12);
+  --tag-bg:       rgba(255,255,255,0.08);
+  --serif: 'Instrument Serif', serif;
+  --sans:  'DM Sans', sans-serif;
+  --max: 880px;
+
+  /* ── TYPE SCALE ── */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-lg:   20px;
+  --text-xl:   28px;
+  --text-2xl:  36px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: #1A2A46;
+  color: var(--ink);
+  font-size: var(--text-sm);   /* 14px base */
+  line-height: 1.7;
+}
+
+
+/* ── TOP NAV ── */
+.topbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(26,42,70,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+}
+.topbar-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.topbar-name { font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: -0.2px; }
+.topbar-links { display: flex; gap: 24px; }
+.topbar-links a {
+  font-size: 13px; color: var(--muted); text-decoration: none;
+  transition: color 0.2s; position: relative;
+}
+.topbar-links a::after {
+  content:''; position:absolute; bottom:-3px; left:0;
+  width:0; height:2px; background:var(--orange);
+  transition:width .25s ease;
+}
+.topbar-links a:hover { color: var(--orange); }
+.topbar-links a:hover::after { width:100%; }
+.topbar-badge {
+  font-size: 12px; background: var(--orange); color: #fff;
+  padding: 5px 14px; border-radius: 20px; font-weight: 500;
+}
+
+/* ── WRAPPER ── */
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+
+/* ── HERO ── */
+#hero {
+  padding: 56px 0 0;
+  border-bottom: 1px solid var(--border);
+}
+.hero-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 32px;
+  display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: start;
+}
+.hero-label {
+  font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 14px;
+}
+/* ── Role cycler ── */
+.hero-label {
+  font-size: 16px; font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink2);
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 0;
+  min-height: 28px;
+}
+.role-prefix { color: var(--muted); margin-right: 6px; }
+.role-cycler {
+  color: var(--orange);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.role-cursor {
+  color: var(--orange);
+  font-weight: 300;
+  margin-left: 2px;
+  animation: cursorBlink 0.8s step-end infinite;
+}
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.hero-name {
+  font-family: var(--serif);
+  font-size: clamp(48px, 7vw, 72px);
+  line-height: 1.0;
+  color: var(--ink);
+  letter-spacing: -1.5px;
+  margin-bottom: 18px;
+}
+.hero-name em { font-style: italic; color: var(--orange); }
+.hero-bio {
+  font-size: 16px; color: var(--ink2); line-height: 1.78;
+  max-width: 480px; margin-bottom: 30px;
+}
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 38px; }
+.btn-main {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--ink); color: #fff;
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
+  padding: 12px 22px; border-radius: 6px; text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-main:hover { background: var(--orange); transform: translateY(-1px); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 7px;
+  border: 1px solid var(--border); color: var(--ink2);
+  font-family: var(--sans); font-size: 14px; font-weight: 400;
+  padding: 12px 20px; border-radius: 6px; text-decoration: none; background: var(--white);
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover { border-color: var(--ink); color: var(--ink); }
+
+.hero-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+.meta-chip {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 14px; color: var(--muted);
+}
+.meta-chip strong { color: var(--ink); font-weight: 500; }
+
+/* stats row */
+.stats-row {
+  display: flex; gap: 0;
+  border-top: 1px solid var(--border);
+  margin-top: 38px;
+}
+.stat-box {
+  flex: 1; padding: 22px 0;
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+.stat-box:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--serif); font-size: 36px;
+  color: var(--ink); line-height: 1; margin-bottom: 5px;
+}
+.stat-num sup { font-size: 18px; }
+.stat-lbl { font-size: 12px; color: var(--muted); }
+
+/* hero right — photo */
+.hero-graphic {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 8px;
+}
+.hero-photo-wrap {
+  position: relative;
+  width: 100%;
+}
+.hero-photo {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.13);
+}
+.hero-photo-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(26,42,70,0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 7px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.hero-photo-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+  50%      { box-shadow: 0 0 0 5px rgba(34,197,94,0); }
+}
+.hero-tags {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.hero-tag {
+  font-size: 11px; color: var(--muted);
+  background: var(--tag-bg); border: 1px solid var(--border);
+  padding: 4px 10px; border-radius: 4px;
+}
+
+/* ── SECTION COMMON ── */
+.section { padding: 60px 0; border-bottom: 1px solid var(--border); }
+.sec-eyebrow {
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 8px;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.sec-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px; height: 2px;
+  background: var(--orange);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.sec-title {
+  font-family: var(--serif); font-size: 34px; letter-spacing: -0.5px;
+  color: var(--ink); margin-bottom: 6px;
+}
+.sec-sub { font-size: 16px; color: var(--muted); margin-bottom: 36px; line-height: 1.7; }
+
+/* ── ABOUT ── */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.about-body { font-size: 14px; color: var(--ink2); line-height: 1.8; }
+.about-body p + p { margin-top: 14px; }
+.about-facts { display: flex; flex-direction: column; gap: 12px; }
+.fact-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.fact-row:last-child { border-bottom: none; }
+.fact-label { color: var(--muted); }
+.fact-val { color: var(--ink); font-weight: 500; }
+.inline-tags { display: flex; flex-wrap: wrap; gap: 5px; justify-content: flex-end; }
+.itag {
+  font-size: 11px; background: var(--tag-bg); border: 1px solid var(--border);
+  color: var(--ink2); padding: 3px 9px; border-radius: 3px;
+}
+
+/* ── WORK HISTORY ── */
+.job-list { display: flex; flex-direction: column; gap: 0; }
+.job-card {
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+  position:relative; overflow:hidden;
+  transition:background .2s ease;
+}
+.job-card:last-child { border-bottom: none; }
+.job-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 20px;
+}
+.job-left { }
+.job-company {
+  font-family: var(--serif); font-size: 26px; color: var(--ink);
+  letter-spacing: -0.3px; margin-bottom: 5px;
+}
+.job-role { font-size: 16px; color: var(--orange); font-weight: 500; }
+.job-right { text-align: right; flex-shrink: 0; margin-left: 20px; }
+.job-period { font-size: 14px; color: var(--muted); }
+.job-loc { font-size: 13px; color: var(--muted); margin-top: 3px; }
+.job-bullets { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.job-bullets li {
+  font-size: 15px; color: var(--ink2); padding-left: 20px;
+  position: relative; line-height: 1.65;
+}
+.job-bullets li::before {
+  content: '—'; position: absolute; left: 0; color: var(--orange);
+  font-size: 13px; top: 1px;
+}
+
+/* ── EXPERTISE ── */
+.expertise-intro { font-size: 16px; color: var(--muted); margin-bottom: 28px; }
+.expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 36px; }
+.exp-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 8px; padding: 20px;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+.exp-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); transform: translateY(-2px); }
+.exp-card-icon {
+  width: 36px; height: 36px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; margin-bottom: 12px;
+}
+.icon-orange { background: var(--orange-light); }
+.icon-green  { background: var(--green-light); }
+.icon-blue   { background: var(--blue-light); }
+.exp-card-title { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.exp-card-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+.tools-section { margin-top: 8px; }
+.tools-label {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 14px;
+}
+.tools-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.tool-chip {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--white); border: 1px solid var(--border);
+  padding: 7px 14px; border-radius: 6px;
+  font-size: 12px; color: var(--ink2); font-weight: 500;
+  transition: border-color 0.2s;
+}
+.tool-chip:hover { border-color: var(--ink); }
+.tool-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+/* ── KEY HIGHLIGHTS ── */
+.highlights-intro { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+.highlights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.hl-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 8px; padding: 20px;
+  transition: box-shadow 0.2s;
+}
+.hl-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.hl-card-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.hl-card-body { font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+
+/* ── ACADEMIC ── */
+.academic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.acad-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 8px; padding: 24px;
+}
+.acad-label {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 12px;
+}
+.acad-degree {
+  font-family: var(--serif); font-size: 22px; color: var(--ink);
+  letter-spacing: -0.3px; margin-bottom: 4px;
+}
+.acad-field { font-size: 13px; color: var(--orange); font-weight: 500; margin-bottom: 6px; }
+.acad-school { font-size: 12px; color: var(--muted); }
+.cert-list { display: flex; flex-direction: column; gap: 10px; }
+.cert-row {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 12.5px; color: var(--ink2); line-height: 1.5;
+  padding-bottom: 10px; border-bottom: 1px solid var(--border);
+}
+.cert-row:last-child { border-bottom: none; padding-bottom: 0; }
+.cert-check {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: rgba(255,51,170,0.12); color: var(--orange);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; flex-shrink: 0; margin-top: 1px;
+}
+
+/* ══════════════════════════════════════
+   FULL CASE STUDIES
+   ══════════════════════════════════════ */
+
+#results { background: var(--cream); }
+
+.case-study { border-top: 1px solid var(--border); }
+
+/* ── HERO BAND (dark, image, floating pills) ── */
+.cs-hero { background: #0f1825; padding: 0; position: relative; overflow: hidden; }
+.cs-hero-inner { max-width: var(--max); margin: 0 auto; padding: 52px 32px 0; }
+.cs-breadcrumb {
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.35); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 8px;
+}
+.cs-breadcrumb span { opacity: 0.4; }
+.cs-hero-title {
+  font-family: var(--serif); font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400; color: #fff; line-height: 1.15;
+  letter-spacing: -0.5px; max-width: 620px; margin-bottom: 16px;
+}
+.cs-hero-intro {
+  font-size: 14px; color: rgba(255,255,255,0.55);
+  line-height: 1.75; max-width: 580px; margin-bottom: 0;
+}
+.cs-hero-img-placeholder {
+  width: 100%; height: 260px; margin-top: 32px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 52px;
+}
+
+/* Floating stat pills — sit half over the image bottom */
+.cs-hero-stats {
+  max-width: var(--max); margin: 0 auto; padding: 0 32px;
+  display: flex; gap: 0; flex-wrap: wrap;
+  transform: translateY(-50%);
+}
+.cs-stat-pill {
+  background: #fff; border-radius: 16px;
+  padding: 22px 32px; min-width: 190px; flex: 1;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.15);
+  margin-right: 16px;
+}
+.cs-stat-pill:last-child { margin-right: 0; }
+.cs-stat-pill-num {
+  font-family: var(--sans); font-size: 32px; font-weight: 800;
+  color: var(--ink); line-height: 1; margin-bottom: 6px;
+}
+.cs-stat-pill-label { font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+/* ── SUMMARY CARD (image 2 exact match) ── */
+.cs-body { max-width: var(--max); margin: 0 auto; padding: 0 32px 64px; }
+
+/* The white rounded card that wraps header + CAO + metrics */
+.cs-summary-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  border-top: 3px solid var(--orange);
+  overflow: hidden;
+  margin-bottom: 48px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+}
+
+/* Card top: icon, company name, meta, tags */
+.cs-card-header {
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.cs-card-top {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 16px;
+}
+.cs-card-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.cs-card-name {
+  font-family: var(--sans); font-size: 18px; font-weight: 700;
+  color: var(--ink); margin-bottom: 3px; letter-spacing: -0.2px;
+}
+.cs-card-meta {
+  font-size: 13px; color: var(--muted);
+  display: flex; align-items: center; gap: 0;
+}
+.cs-card-meta-dot { margin: 0 8px; opacity: 0.4; }
+
+/* Pill tags row — exactly as in image 2 */
+.cs-pill-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.cs-pill {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 8px 18px;
+  border-radius: 24px; border: 1.5px solid; cursor: default;
+  transition: background 0.2s;
+}
+.cs-pill-primary {
+  color: var(--orange); border-color: var(--orange);
+  background: transparent;
+}
+.cs-pill-neutral {
+  color: var(--ink2); border-color: #ccc;
+  background: transparent;
+}
+
+/* CAO 3-col panel — warm beige background, matching image 2 */
+.cs-cao {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  background: rgba(255,255,255,0.05);
+  margin: 0;
+}
+.cs-cao-col {
+  padding: 26px 24px;
+}
+.cs-cao-col + .cs-cao-col { border-left: 1px solid rgba(0,0,0,0.08); }
+.cs-cao-label {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #B0B7C3; margin-bottom: 14px;
+}
+.cs-cao-icon { font-size: 12px; }
+.cs-cao-body {
+  font-size: 13.5px; color: #d0d8e8; line-height: 1.75;
+}
+
+/* Metrics strip — white bg, separated cells, arrows */
+.cs-metrics-strip {
+  display: grid;
+  border-top: 1px solid var(--border);
+  background: var(--white);
+}
+.cs-metric-cell {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+.cs-metric-cell:last-child { border-right: none; }
+.cs-metric-val {
+  font-family: var(--sans); font-size: 22px; font-weight: 800;
+  color: var(--ink); line-height: 1; margin-bottom: 6px;
+  display: flex; align-items: center; gap: 5px;
+}
+.cs-arr-up   { font-size: 14px; color: #2d9e5f; }
+.cs-arr-down { font-size: 14px; color: var(--orange); }
+.cs-metric-lbl {
+  font-size: 9.5px; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* ── DEEP SECTIONS (About, Need, Plan, Execution, Results) ── */
+.cs-section { margin-bottom: 52px; }
+.cs-section:last-child { margin-bottom: 0; }
+
+.cs-section-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--orange);
+  border: 1.5px solid var(--orange); border-radius: 20px;
+  padding: 5px 14px; margin-bottom: 20px;
+}
+.cs-section-title {
+  font-family: var(--serif); font-size: 26px;
+  color: var(--ink); letter-spacing: -0.3px;
+  margin-bottom: 16px; line-height: 1.2;
+}
+.cs-section-body { font-size: 14px; color: var(--ink2); line-height: 1.85; }
+.cs-section-body p + p { margin-top: 14px; }
+
+/* About 2-col */
+.cs-about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+.cs-about-img-placeholder {
+  width: 100%; border-radius: 12px; aspect-ratio: 4/3;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 40px;
+}
+
+/* Numbered list */
+.cs-num-list { list-style: none; padding: 0; margin-top: 16px; display: flex; flex-direction: column; gap: 14px; }
+.cs-num-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 14px; color: var(--ink2); line-height: 1.7; }
+.cs-num {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--orange); color: #fff;
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; margin-top: 2px;
+}
+
+/* Pull quote */
+.cs-quote {
+  border-left: 3px solid var(--orange); margin: 28px 0; padding: 20px 24px;
+  background: var(--orange-light); border-radius: 0 8px 8px 0;
+}
+.cs-quote-text { font-family: var(--serif); font-size: 18px; font-style: italic; color: var(--ink); line-height: 1.6; margin-bottom: 10px; }
+.cs-quote-attr { font-size: 12px; color: var(--muted); }
+
+/* Execution sub-headings */
+.cs-exec-subhead { font-size: 13px; font-weight: 700; color: var(--ink); margin: 22px 0 8px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* Results dark strip */
+.cs-results-strip { background: #0f1825; border-radius: 14px; padding: 36px 32px; margin-top: 8px; }
+.cs-results-strip-title { font-family: var(--serif); font-size: 22px; color: #fff; margin-bottom: 28px; letter-spacing: -0.3px; }
+.cs-results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border-radius: 10px; overflow: hidden; }
+.cs-result-cell { background: #1a2540; padding: 24px 20px; }
+.cs-result-num { font-family: var(--sans); font-size: 34px; font-weight: 800; line-height: 1; margin-bottom: 8px; color: #fff; }
+.cs-result-num.positive { color: #4ade80; }
+.cs-result-num.highlight { color: var(--orange); }
+.cs-result-label { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+/* Divider */
+.cs-divider { max-width: var(--max); margin: 0 auto; height: 1px; background: var(--border); }
+
+/* ── READ CASE STUDY BUTTON ── */
+.cs-read-wrap {
+  text-align: center;
+  padding: 32px 0 40px;
+}
+.cs-read-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--orange); color: #fff;
+  font-family: var(--sans); font-size: 14px; font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 14px 36px; border-radius: 8px; border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 18px rgba(232,82,26,0.28);
+}
+.cs-read-btn:hover {
+  background: #d4400e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(232,82,26,0.38);
+}
+.cs-read-arrow { font-size: 16px; transition: transform 0.3s; }
+
+/* ── COLLAPSIBLE DETAILS DRAWER ── */
+.cs-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cs-details.cs-details-open {
+  max-height: 9999px;
+}
+
+/* ── REFERENCES ── */
+.refs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.ref-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 8px; padding: 20px;
+  position: relative; overflow: hidden;
+}
+.ref-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--orange), #ff88cc);
+}
+.ref-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--orange-light); color: var(--orange);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: 14px; margin-bottom: 12px;
+}
+
+/* Ref card photo layout */
+.ref-card {
+  display: flex;
+  flex-direction: column;
+}
+.ref-photo-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.ref-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform .4s ease;
+}
+.ref-card:hover .ref-photo { transform: scale(1.04); }
+.ref-info { padding: 0 2px; }
+.ref-name { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+.ref-role { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+.ref-contact { font-size: 12px; color: var(--ink2); }
+
+/* ── FOOTER ── */
+footer {
+  padding: 28px 0; background: #1F1E33;
+  border-top: 1px solid var(--border);
+}
+.foot-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.foot-name { font-family: var(--serif); font-size: 18px; color: var(--ink); letter-spacing: -0.3px; }
+.foot-links { display: flex; gap: 20px; }
+.foot-links a { font-size: 12px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.foot-links a:hover { color: var(--orange); }
+.foot-copy { font-size: 11px; color: var(--muted); }
+
+/* ══════════════════════════════
+   ANIMATIONS (lightweight only)
+   ══════════════════════════════ */
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+
+.reveal { opacity:0; transform:translateY(20px); transition:opacity .5s ease, transform .5s ease; }
+.reveal.vis { opacity:1; transform:none; }
+.reveal-d1 { transition-delay:.08s; }
+.reveal-d2 { transition-delay:.16s; }
+.reveal-d3 { transition-delay:.24s; }
+.reveal-d4 { transition-delay:.32s; }
+.reveal-right { opacity:0; transform:translateX(20px); transition:opacity .5s ease, transform .5s ease; }
+.reveal-right.vis { opacity:1; transform:none; }
+.reveal-scale { opacity:0; transform:scale(.97); transition:opacity .5s ease, transform .5s ease; }
+.reveal-scale.vis { opacity:1; transform:scale(1); }
+
+.hero-label   { animation:fadeUp .5s .05s ease both; }
+.hero-name    { animation:fadeUp .5s .12s ease both; }
+.hero-bio     { animation:fadeUp .5s .19s ease both; }
+.hero-actions { animation:fadeUp .5s .26s ease both; }
+.hero-meta    { animation:fadeUp .5s .33s ease both; }
+.stats-row    { animation:fadeUp .5s .40s ease both; }
+.hero-graphic { animation:fadeUp .5s .28s ease both; }
+.hero-photo   { animation:fadeUp .5s .20s ease both; }
+
+.stat-box:nth-child(1) { animation:fadeUp .5s .50s ease both; }
+.stat-box:nth-child(2) { animation:fadeUp .5s .58s ease both; }
+.stat-box:nth-child(3) { animation:fadeUp .5s .66s ease both; }
+.stat-box:nth-child(4) { animation:fadeUp .5s .74s ease both; }
+
+/* ══════════════════════════════════════
+   GRADIENT BORDER — pink→orange→yellow
+   ══════════════════════════════════════ */
+
+/* The gradient used everywhere */
+:root {
+  --grad: linear-gradient(90deg, #FF33AA 0%, #FF6B35 50%, #FFD700 100%);
+  --grad-v: linear-gradient(180deg, #FF33AA 0%, #FF6B35 50%, #FFD700 100%);
+  --grad-diag: linear-gradient(135deg, #FF33AA 0%, #FF6B35 50%, #FFD700 100%);
+}
+
+/* ── Gradient border mixin via padding trick ─────────
+   Wrapper sets the gradient bg, inner clip cuts it    */
+.grad-border {
+  position: relative;
+  background: var(--grad) border-box;
+  border: 1.5px solid transparent;
+  border-radius: inherit;
+}
+
+/* ── BTN MAIN — solid pink→orange fill ── */
+.btn-main {
+  background: var(--grad) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(255,51,170,0.35), 0 2px 8px rgba(255,107,53,0.2) !important;
+  transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+.btn-main::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0.08) 100%);
+  opacity: 0; transition: opacity .2s;
+}
+.btn-main:hover { transform: translateY(-2px) !important; box-shadow: 0 8px 28px rgba(255,51,170,0.45), 0 4px 12px rgba(255,107,53,0.3) !important; opacity: 0.95; }
+.btn-main:hover::after { opacity: 1; }
+
+/* ── BTN OUTLINE — gradient border, transparent fill ── */
+.btn-outline {
+  background: transparent !important;
+  color: #FF33AA !important;
+  border: none !important;
+  position: relative;
+  transition: transform .18s ease, box-shadow .18s ease !important;
+  z-index: 0;
+}
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  padding: 1.5px;
+  background: var(--grad);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.btn-outline:hover { transform: translateY(-2px) !important; box-shadow: 0 4px 20px rgba(255,51,170,0.25) !important; }
+
+/* ── CS READ BUTTON — gradient border + bg ── */
+.cs-read-btn {
+  background: var(--grad) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(255,51,170,0.3) !important;
+  transition: transform .18s ease, box-shadow .18s ease !important;
+}
+.cs-read-btn:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 28px rgba(255,51,170,0.45) !important; }
+
+/* ── TOPBAR NAV LINK underline — gradient ── */
+.topbar-links a::after {
+  content: '';
+  position: absolute; bottom: -3px; left: 0;
+  width: 0; height: 2px;
+  background: var(--grad);
+  transition: width .22s ease;
+}
+.topbar-links a:hover { color: #FF33AA !important; }
+.topbar-links a:hover::after { width: 100%; }
+
+/* ── TOPBAR BADGE — gradient bg ── */
+.topbar-badge {
+  background: var(--grad) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+/* ── EXP CARDS — gradient top border on hover ── */
+.exp-card {
+  transition: transform .18s ease, box-shadow .18s ease !important;
+  position: relative; overflow: hidden;
+}
+.exp-card::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--grad);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .3s ease;
+}
+.exp-card:hover { transform: translateY(-4px) !important; box-shadow: 0 8px 28px rgba(255,51,170,0.12) !important; }
+.exp-card:hover::after { transform: scaleX(1); }
+
+/* ── HL CARDS — gradient left bar ── */
+.hl-card { position: relative; overflow: hidden; transition: transform .18s ease !important; }
+.hl-card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--grad-v);
+  transform: scaleY(0); transform-origin: bottom; transition: transform .25s ease;
+}
+.hl-card:hover { transform: translateY(-3px) !important; }
+.hl-card:hover::before { transform: scaleY(1); }
+
+/* ── JOB CARDS — gradient left bar on hover ── */
+.job-card { position: relative; overflow: hidden; transition: background .18s ease; }
+.job-card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--grad-v);
+  transform: scaleY(0); transform-origin: top; transition: transform .25s ease;
+}
+.job-card:hover { background: rgba(255,51,170,.04) !important; }
+.job-card:hover::before { transform: scaleY(1); }
+
+/* ── TOOL CHIPS — gradient border ── */
+.tool-chip {
+  transition: box-shadow .18s ease, transform .18s ease !important;
+  position: relative; overflow: hidden;
+}
+.tool-chip::before {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: inherit; padding: 1px;
+  background: var(--grad);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0; transition: opacity .2s;
+  pointer-events: none;
+}
+.tool-chip:hover::before { opacity: 1; }
+.tool-chip:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(255,51,170,0.18) !important; }
+
+/* ── REF CARDS — gradient top border ── */
+.ref-card { transition: transform .18s ease, box-shadow .18s ease !important; position: relative; }
+.ref-card::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--grad); border-radius: 8px 8px 0 0;
+}
+.ref-card:hover { transform: translateY(-3px) !important; box-shadow: 0 6px 24px rgba(255,51,170,0.15) !important; }
+
+/* ── ACAD CARDS — gradient top border ── */
+.acad-card { transition: transform .18s ease !important; position: relative; }
+.acad-card::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--grad); border-radius: 8px 8px 0 0; opacity: 0.6;
+}
+.acad-card:hover { transform: translateY(-2px) !important; }
+
+/* ── CS STAT PILLS — gradient border ── */
+.cs-stat-pill {
+  transition: transform .18s ease, box-shadow .18s ease !important;
+  position: relative;
+}
+.cs-stat-pill::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--grad); border-radius: 16px 16px 0 0;
+}
+.cs-stat-pill:hover { transform: translateY(-4px) !important; box-shadow: 0 8px 24px rgba(255,51,170,0.2) !important; }
+
+/* ── CS SUMMARY CARD — gradient top border ── */
+.cs-summary-card {
+  transition: box-shadow .2s ease, transform .2s ease !important;
+  border-top: none !important;
+  position: relative;
+}
+/* Override with pseudo */
+.cs-summary-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--grad); border-radius: 20px 20px 0 0; z-index: 1;
+}
+.cs-summary-card:hover { transform: translateY(-3px) !important; box-shadow: 0 10px 32px rgba(255,51,170,0.18) !important; }
+
+/* ── SM CARDS — gradient top bar (override Instagram bar) ── */
+.sm-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--grad) !important;
+  border-radius: 14px 14px 0 0;
+}
+.sm-card:hover { transform: translateY(-4px) !important; box-shadow: 0 12px 32px rgba(255,51,170,0.15) !important; }
+
+/* ── MOCKUP CARDS — gradient top border ── */
+.mockup-card { transition: transform .18s ease, box-shadow .18s ease; position: relative; }
+.mockup-coming::before, .mockup-design-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--grad); border-radius: 14px 14px 0 0;
+}
+.mockup-card:hover { transform: translateY(-4px) !important; box-shadow: 0 12px 30px rgba(255,51,170,0.14) !important; }
+
+/* ── DESIGN POST CARDS — gradient top ── */
+.design-post-card { transition: transform .18s ease, box-shadow .18s ease; position: relative; overflow: hidden; }
+.design-post-card::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--grad); z-index: 2;
+}
+.design-post-card:hover { transform: translateY(-5px) !important; box-shadow: 0 14px 36px rgba(255,51,170,0.18) !important; }
+
+/* ── SKILL BAR fills — gradient ── */
+.sbf {
+  background: var(--grad) !important;
+  transition: width 1.2s cubic-bezier(.4,0,.2,1) !important;
+}
+
+/* ── SECTION EYEBROW — gradient underline dash ── */
+.sec-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px; height: 2px;
+  background: var(--grad);
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+/* ── FOOT LINKS — gradient underline ── */
+.foot-links a::after {
+  content: ''; position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 1.5px;
+  background: var(--grad);
+  transition: width .22s ease;
+}
+.foot-links a:hover::after { width: 100%; }
+
+/* ── CS PILL PRIMARY — gradient border ── */
+.cs-pill-primary {
+  background: transparent !important;
+  color: #FF33AA !important;
+  position: relative;
+  border: none !important;
+}
+.cs-pill-primary::before {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 24px; padding: 1.5px;
+  background: var(--grad);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── CS NUM circles — gradient bg ── */
+.cs-num {
+  background: var(--grad) !important;
+  color: #fff !important;
+}
+
+/* ── CS SECTION LABEL pill — gradient border ── */
+.cs-section-label {
+  color: #FF33AA !important;
+  border: none !important;
+  position: relative;
+}
+.cs-section-label::before {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 20px; padding: 1.5px;
+  background: var(--grad);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── METRIC cell hover ── */
+.cs-metric-cell { transition: background .15s ease !important; }
+.cs-metric-cell:hover { background: rgba(255,51,170,0.07) !important; }
+.cs-metric-cell:hover .cs-metric-val { color: #FF33AA !important; }
+
+/* ── CAO col hover ── */
+.cs-cao-col { transition: background .15s ease !important; }
+.cs-cao-col:hover { background: rgba(255,51,170,0.04) !important; }
+
+/* ── CS PILL NEUTRAL hover ── */
+.cs-pill-neutral { transition: all .15s ease !important; }
+.cs-pill-neutral:hover { border-color: #FF33AA !important; color: #FF33AA !important; background: rgba(255,51,170,0.07) !important; }
+
+
+/* ── SOCIAL MEDIA PROFILE CARDS ── */
+.sm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+.sm-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  position: relative;
+  overflow: hidden;
+}
+.sm-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #e1306c, #f77737, #fcaf45);
+}
+.sm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.09);
+  border-color: rgba(225,48,108,.3);
+}
+.sm-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.sm-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 700; color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(255,255,255,.8), 0 0 0 4px rgba(225,48,108,.4);
+}
+.sm-info { flex: 1; min-width: 0; }
+.sm-handle {
+  font-size: 15px; font-weight: 700; color: var(--ink);
+  margin-bottom: 2px; letter-spacing: -0.2px;
+}
+.sm-name { font-size: 13px; color: var(--muted); margin-bottom: 2px; }
+.sm-niche { font-size: 12px; color: var(--muted); }
+.sm-ig-badge {
+  font-size: 10px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #e1306c, #f77737);
+  color: #fff;
+  padding: 4px 10px; border-radius: 20px;
+  flex-shrink: 0;
+}
+.sm-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.sm-tag {
+  font-size: 11px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; padding: 3px 10px; border-radius: 4px;
+  background: var(--tag-bg); border: 1px solid var(--border); color: var(--ink2);
+}
+.sm-desc {
+  font-size: 14px; color: var(--muted); line-height: 1.65;
+  margin-bottom: 16px;
+}
+.sm-cta {
+  font-size: 13px; font-weight: 600; color: #e1306c;
+  display: flex; align-items: center; gap: 4px;
+}
+
+/* ── GRAPHIC DESIGN POST CARDS ── */
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.design-post-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--white);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.design-post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.12);
+}
+.design-post-thumb {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.design-post-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0);
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s ease;
+}
+.design-post-card:hover .design-post-overlay { background: rgba(0,0,0,.45); }
+.design-post-overlay span {
+  color: #fff; font-size: 13px; font-weight: 600;
+  opacity: 0; transition: opacity .2s ease;
+  text-align: center; padding: 0 16px;
+}
+.design-post-card:hover .design-post-overlay span { opacity: 1; }
+
+/* decorative shapes inside thumb */
+.dps-wrap { position: absolute; inset: 0; pointer-events: none; }
+.dps { position: absolute; border-radius: 50%; opacity: .15; }
+.dps1 { width:90px;height:90px;background:#fff;top:-20px;right:-20px; }
+.dps2 { width:60px;height:60px;background:#fff;bottom:10px;left:10px; }
+.dps3 { width:40px;height:40px;background:#fff;top:50%;left:50%;transform:translate(-50%,-50%); }
+.dps4 { width:70px;height:70px;background:#fff;bottom:-20px;right:20px; }
+
+.design-post-body { padding: 14px 16px 16px; }
+.design-post-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 8px; }
+.design-post-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; padding: 3px 8px; border-radius: 3px;
+  background: rgba(255,51,170,0.12); color: var(--orange);
+}
+.design-post-desc {
+  font-size: 13px; color: var(--muted); line-height: 1.55;
+}
+
+@media (max-width: 720px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-graphic { display: none; }
+  .about-grid, .highlights-grid, .academic-grid, .refs-grid { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: 1fr 1fr; }
+  .mockup-grid { grid-template-columns: 1fr; }
+  .sm-grid { grid-template-columns: 1fr; }
+  .design-grid { grid-template-columns: 1fr 1fr; }
+  .metrics-row { grid-template-columns: 1fr 1fr; }
+  .topbar-links { display: none; }
+  .stats-row { flex-wrap: wrap; }
+  .stat-box { flex: 0 0 50%; }
+  .cs-about-grid { grid-template-columns: 1fr; }
+  .cs-results-grid { grid-template-columns: 1fr 1fr; }
+  .cs-hero-stats { flex-wrap: wrap; transform: translateY(-30px); }
+  .cs-stat-pill { min-width: 140px; }
+}
+@media (max-width: 480px) {
+  .expertise-grid { grid-template-columns: 1fr; }
+  .design-grid { grid-template-columns: 1fr; }
+  .metrics-row { grid-template-columns: 1fr 1fr; }
+  .wrap, .hero-inner, .results-inner, .foot-inner { padding-left: 20px; padding-right: 20px; }
+  .cs-hero-inner, .cs-body, .cs-hero-stats { padding-left: 20px; padding-right: 20px; }
+  .cs-results-grid { grid-template-columns: 1fr; }
+}
+
+/* ── MOCKUP SECTIONS ── */
+.mockup-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-bottom: 32px;
+}
+.mockup-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.mockup-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(0,0,0,0.09); }
+.mockup-card-inner { padding: 24px; }
+.mockup-coming { border-top: 3px solid var(--orange); }
+.mockup-design-card { border-top: 3px solid var(--blue); }
+.mockup-platform-icons { display: flex; gap: 8px; margin-bottom: 16px; }
+.platform-icon {
+  width: 36px; height: 36px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; flex-shrink: 0;
+}
+.mockup-brand-placeholder {
+  font-family: var(--serif); font-size: 22px; font-weight: 700;
+  color: var(--ink); margin-bottom: 10px; letter-spacing: -0.3px;
+}
+.mockup-desc { font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 18px; }
+.mockup-stats-row {
+  display: flex; border: 1px solid var(--border); border-radius: 8px;
+  overflow: hidden; margin-bottom: 16px;
+}
+.mockup-stat { flex: 1; padding: 12px 10px; text-align: center; border-right: 1px solid var(--border); }
+.mockup-stat:last-child { border-right: none; }
+.mockup-stat-num { display: block; font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
+.mockup-stat-lbl { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.mockup-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--muted);
+  background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+  padding: 5px 12px; border-radius: 20px;
+}
+.mockup-tags-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+.mockup-tag {
+  font-size: 11px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
+  background: var(--tag-bg); border: 1px solid var(--border); color: var(--ink2);
+}
+.mockup-cta-note {
+  font-size: 15px; color: var(--muted); text-align: center;
+  padding: 20px; border: 1px dashed rgba(255,255,255,0.15); border-radius: 8px;
+}
+.design-preview {
+  height: 120px; background: rgba(255,255,255,0.05); border-radius: 8px;
+  margin-bottom: 16px; position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.design-label {
+  position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+  font-size: 11px; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); white-space: nowrap;
+}
+.design-shapes { position: absolute; inset: 0; }
+.ds { position: absolute; border-radius: 50%; opacity: .18; }
+.ds1 { width:80px;height:80px;background:var(--orange);top:10px;left:20px; }
+.ds2 { width:50px;height:50px;background:var(--blue);top:30px;right:30px; }
+.ds3 { width:35px;height:35px;background:var(--green);bottom:10px;left:50%;transform:translateX(-50%); }
+.sg { position:absolute; border-radius:4px; background:var(--orange); opacity:.2; }
+.sg1{width:44px;height:44px;top:12px;left:16px} .sg2{width:44px;height:44px;top:12px;left:68px;background:var(--blue)}
+.sg3{width:44px;height:44px;top:64px;left:16px;background:var(--green)} .sg4{width:44px;height:44px;top:64px;left:68px}
+.cp { position:absolute; border-radius:4px; background:var(--ink); opacity:.1; }
+.cp1{width:90px;height:60px;top:20px;left:24px;transform:rotate(-4deg)}
+.cp2{width:70px;height:50px;top:35px;right:20px;background:var(--orange);opacity:.18;transform:rotate(3deg)}
+
+
+
+   ══════════════════════════════════ */
+
+/* Card surfaces */
+.exp-card, .hl-card, .acad-card, .ref-card,
+.job-card, .mockup-card, .sm-card, .design-post-card,
+.cs-summary-card, .ip, .rc, .cs-stat-pill {
+  background: #212d42 !important;
+  border-color: rgba(255,255,255,0.1) !important;
+  color: var(--ink2) !important;
+}
+
+/* Stat pills in hero (dark bg already, make white) */
+.cs-stat-pill { background: #212d42 !important; box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important; }
+.cs-stat-pill-num { color: #ffffff !important; }
+.cs-stat-pill-label { color: var(--muted) !important; }
+
+/* Tool chips */
+.tool-chip { background: rgba(255,255,255,0.06) !important; border-color: rgba(255,255,255,0.12) !important; color: var(--ink2) !important; }
+.tool-chip:hover { background: var(--orange-light) !important; border-color: var(--orange) !important; color: var(--orange) !important; }
+
+/* Skill bars bg */
+.sbb { background: rgba(255,255,255,0.1) !important; }
+
+/* Tag chips */
+.sm-tag, .mockup-tag, .itag, .hero-tag { background: rgba(255,255,255,0.08) !important; border-color: rgba(255,255,255,0.12) !important; color: var(--ink2) !important; }
+
+/* Fact rows */
+.fact-row { border-color: rgba(255,255,255,0.08) !important; }
+.fact-label { color: var(--muted) !important; }
+.fact-val { color: var(--ink) !important; }
+
+/* About body */
+.about-body p { color: var(--ink2) !important; }
+
+/* Cert rows */
+.cert-row { border-color: rgba(255,255,255,0.08) !important; color: var(--ink2) !important; }
+
+/* Stats row */
+.stats-row { border-color: rgba(255,255,255,0.1) !important; }
+.stat-box { border-color: rgba(255,255,255,0.1) !important; }
+.stat-lbl { color: var(--muted) !important; }
+
+/* Job bullets */
+.job-bullets li { color: var(--ink2) !important; }
+.job-period, .job-loc { color: var(--muted) !important; }
+
+/* Section body text */
+.cs-section-body p, .cs-section-body,
+.cs-cao-body, .cs-result-label,
+.about-body, .highlights-intro, .expertise-intro,
+.hl-card-body, .exp-card-desc, .sm-desc,
+.design-post-desc, .mockup-desc, .cs-hero-intro { color: var(--ink2) !important; }
+
+/* CAO labels */
+.cs-cao-label { color: var(--accent) !important; }
+
+/* Metrics strip */
+.cs-metrics-strip { background: #212d42 !important; border-color: rgba(255,255,255,0.08) !important; }
+.cs-metric-cell { border-color: rgba(255,255,255,0.08) !important; }
+.cs-metric-val { color: var(--ink) !important; }
+.cs-metric-lbl { color: var(--muted) !important; }
+.cs-metric-cell:hover { background: var(--orange-light) !important; }
+.cs-metric-cell:hover .cs-metric-val { color: var(--orange) !important; }
+
+/* CS result strip */
+.cs-results-strip-title { color: #fff !important; }
+.cs-result-num { color: #fff !important; }
+.cs-result-num.positive { color: #6ee7b7 !important; }
+.cs-result-num.highlight { color: var(--orange) !important; }
+
+/* Photo badge */
+.hero-photo-badge { background: rgba(26,42,70,0.9) !important; border-color: rgba(255,255,255,0.15) !important; color: #fff !important; }
+
+/* Mockup stats */
+.mockup-stats-row { border-color: rgba(255,255,255,0.08) !important; }
+.mockup-stat { border-color: rgba(255,255,255,0.08) !important; }
+.mockup-stat-num { color: var(--ink) !important; }
+.mockup-stat-lbl { color: var(--muted) !important; }
+.mockup-badge { background: rgba(255,255,255,0.06) !important; border-color: rgba(255,255,255,0.1) !important; color: var(--muted) !important; }
+.mockup-cta-note { border-color: rgba(255,255,255,0.12) !important; color: var(--muted) !important; }
+.mockup-brand-placeholder { color: var(--ink) !important; }
+
+/* Design preview panels */
+.design-preview { background: rgba(255,255,255,0.05) !important; }
+
+/* Ref avatar */
+.ref-avatar { background: var(--orange-light) !important; color: var(--orange) !important; }
+.ref-name { color: var(--ink) !important; }
+.ref-role { color: var(--muted) !important; }
+.ref-contact { color: var(--ink2) !important; }
+
+/* Academic */
+.acad-label { color: var(--muted) !important; }
+.acad-degree { color: var(--ink) !important; }
+.acad-field { color: var(--orange) !important; }
+.acad-school { color: var(--muted) !important; }
+
+/* Highlights */
+.hl-card-title { color: var(--ink) !important; }
+
+/* Expertise icon backgrounds */
+.icon-orange { background: var(--orange-light) !important; }
+.icon-green  { background: rgba(45,106,79,0.15) !important; }
+.icon-blue   { background: rgba(176,183,195,0.12) !important; }
+
+/* CS card header */
+.cs-card-name { color: var(--ink) !important; }
+.cs-card-meta { color: var(--muted) !important; }
+.cs-section-title { color: var(--ink) !important; }
+
+/* Exec subheadings */
+.cs-exec-subhead { color: var(--orange) !important; }
+
+/* Pull quotes */
+.cs-quote { background: var(--orange-light) !important; border-color: var(--orange) !important; }
+.cs-quote-text { color: var(--ink) !important; }
+.cs-quote-attr { color: var(--muted) !important; }
+
+/* About img placeholders */
+.cs-about-img-placeholder { background: rgba(255,255,255,0.05) !important; border-color: rgba(255,255,255,0.08) !important; }
+
+/* SM card */
+.sm-handle { color: var(--ink) !important; }
+.sm-name, .sm-niche { color: var(--muted) !important; }
+.sm-cta { color: var(--orange) !important; }
+
+/* Inline styles on the results intro text */
+.cs-results-grid { background: rgba(255,255,255,0.06) !important; }
+
+/* Section subheadings */
+.sec-sub { color: var(--muted) !important; }
+.cs-num-list li { color: var(--ink2) !important; }
+
+/* Inline fact values */
+.inline-tags .itag { background: rgba(255,255,255,0.08) !important; border-color: rgba(255,255,255,0.1) !important; color: var(--ink2) !important; }
+
+/* Hero meta chips */
+.meta-chip { color: var(--muted) !important; }
+.meta-chip strong { color: var(--ink) !important; }
+
+/* CS pill neutral */
+.cs-pill-neutral { border-color: rgba(255,255,255,0.2) !important; color: var(--ink2) !important; }
+
+/* Footer */
+.foot-name { color: var(--ink) !important; }
+.foot-copy { color: var(--muted) !important; }
+.foot-links a { color: var(--muted) !important; }
+
+/* Topbar */
+.topbar-name { color: var(--ink) !important; }
+.topbar-links a { color: var(--muted) !important; }
+.topbar-badge { background: var(--orange) !important; color: #fff !important; }
+
+/* Role prefix */
+.role-prefix { color: var(--muted) !important; }
+
+/* Job role color */
+.job-role { color: var(--orange) !important; }
+.job-company { color: var(--ink) !important; }
+
+/* Section eyebrow */
+.sec-eyebrow { color: var(--orange) !important; }
+.sec-eyebrow::before { background: var(--orange) !important; }
+
+/* cs-hero breadcrumb */
+.cs-breadcrumb { color: rgba(255,255,255,0.35) !important; }
+.cs-hero-title { color: #fff !important; }
+
+/* SM avatar ring stays vibrant */
+.sm-avatar { box-shadow: 0 0 0 3px rgba(26,42,70,0.8), 0 0 0 4px var(--orange) !important; }
+
+
+/* ── Case study hero cover image ── */
+.cs-hero-cover {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-top: 32px;
+  filter: brightness(0.6);
+}
+.cs-card-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,0.15);
+}
+/* Remove old emoji icon when real logo used */
+.cs-card-icon-img {
+  width: 52px; height: 52px; border-radius: 10px;
+  object-fit: cover; flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,0.12);
+}
+
+/* ── Background canvas ── */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+/* Keep all content above the canvas */
+body > *:not(#bg-canvas) {
+  position: relative;
+  z-index: 1;
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+
+<!-- TOP NAR -->
+<nav class="topbar">
+  <div class="topbar-inner">
+    <span class="topbar-name">Aadesh Dhital</span>
+    <div class="topbar-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#academic">Education</a>
+      <a href="#cs-murray">SEO Cases</a>
+      <a href="#social-cases">Social</a>
+      <a href="#design-cases">Design</a>
+    </div>
+    <span class="topbar-badge">Open to Hire</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-l">
+      <p class="hero-label" style="animation:none;">
+        <span class="role-prefix">I'm a </span><span class="role-cycler" id="roleCycler"></span><span class="role-cursor">|</span>
+      </p>
+      <h1 class="hero-name">Aadesh <em>Dhital</em></h1>
+      <p class="hero-bio">Digital Marketing professional with 5+ years of experience driving measurable business growth through SEO, social media, media buying, and graphic design. Data-led campaigns across multiple channels &amp; industries.</p>
+      <div class="hero-actions">
+        <a href="mailto:digitalaadesh@gmail.com" class="btn-main">⚡ <strong>Hire Me</strong></a>
+        <a href="https://www.linkedin.com/in/aadesh-dhital-45a9a27a/" target="_blank" class="btn-outline">LinkedIn ↗</a>
+        <a href="https://www.instagram.com/digital.aadesh/" target="_blank" class="btn-outline">Instagram ↗</a>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-chip">📍 <strong>Perth, Australia</strong></div>
+        <div class="meta-chip">📧 <strong>digitalaadesh@gmail.com</strong></div>
+        <div class="meta-chip">📞 <strong>+61 403 963 848</strong></div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-num" data-target="5" data-suffix="+">5<sup>+</sup></div>
+          <div class="stat-lbl">Yrs Experience</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-target="3">3</div>
+          <div class="stat-lbl">Companies</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-target="8">8</div>
+          <div class="stat-lbl">Channels Managed</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-target="10" data-suffix="+">10<sup>+</sup></div>
+          <div class="stat-lbl">Skills & Tools</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-graphic">
+      <div class="hero-photo-wrap">
+        <img src="aadesh_photo.png" alt="Aadesh Dhital at his desk" class="hero-photo" />
+        <div class="hero-photo-badge">
+          <span class="hero-photo-dot"></span>
+          Available for hire
+        </div>
+      </div>
+      <div class="hero-tags">
+        <span class="hero-tag">On-Page SEO</span>
+        <span class="hero-tag">Technical SEO</span>
+        <span class="hero-tag">Off-Page SEO</span>
+        <span class="hero-tag">Content Strategy</span>
+        <span class="hero-tag">Social Media</span>
+        <span class="hero-tag">Graphic Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="wrap">
+    <p class="sec-eyebrow reveal">Who I Am</p>
+    <h2 class="sec-title reveal reveal-d1">The Person Behind the Growth</h2>
+    <p class="sec-sub reveal reveal-d2">A snapshot of my background, identity, and professional compass.</p>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>I'm a Digital Marketing Executive based in Perth, Australia with 5+ years of hands-on experience building and executing integrated marketing strategies. My work spans SEO (on-page, off-page, and technical), social media management, media buying, copywriting, and graphic design.</p>
+        <p>I believe in aligning brand strategy with acquisition goals — using data to improve visibility, scale performance, and drive real business outcomes. Whether it's climbing the SERPs or building an engaged social following, I focus on measurable impact.</p>
+        <p>I've worked across three countries — India, the UK, and Australia — giving me a broad perspective on how different markets respond to digital strategy.</p>
+      </div>
+      <div class="about-facts">
+        <div class="fact-row">
+          <span class="fact-label">📍 Location</span>
+          <span class="fact-val">Perth, Australia</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">🎓 Education</span>
+          <span class="fact-val">MBA — Marketing</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">💼 Experience</span>
+          <span class="fact-val">5+ Years</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">🌏 Markets</span>
+          <div class="inline-tags">
+            <span class="itag">Australia</span>
+            <span class="itag">UK</span>
+            <span class="itag">India</span>
+          </div>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">🔍 Core Focus</span>
+          <span class="fact-val">SEO & Digital Marketing</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">📊 Speciality</span>
+          <span class="fact-val">SEO to Higher Ranking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK HISTORY -->
+<section id="work" class="section">
+  <div class="wrap">
+    <p class="sec-eyebrow">Career Path</p>
+    <h2 class="sec-title">Work History</h2>
+    <p class="sec-sub">3 roles across Australia, UK, and India — leading, scaling, and building digital marketing functions.</p>
+    <div class="job-list">
+
+      <div class="job-card reveal">
+        <div class="job-header">
+          <div class="job-left">
+            <div class="job-company">Anxious To Matter</div>
+            <div class="job-role">Content Strategist &amp; On-Page SEO Lead</div>
+          </div>
+          <div class="job-right">
+            <div class="job-period">Melbourne, Australia</div>
+            <div class="job-loc">Multiple Roles</div>
+          </div>
+        </div>
+        <ul class="job-bullets">
+          <li>Owned on-page SEO and content strategy, aligning with business goals and user intent to drive organic growth</li>
+          <li>Developed scalable content frameworks that improved keyword rankings and audience engagement across verticals</li>
+          <li>Led editorial direction, ensuring content consistency, quality, and full SEO alignment at every stage</li>
+          <li>Collaborated with cross-functional teams to integrate SEO into broader performance marketing efforts</li>
+          <li>Promoted across multiple roles based on consistent performance and measurable leadership impact</li>
+        </ul>
+      </div>
+
+      <div class="job-card reveal reveal-d1">
+        <div class="job-header">
+          <div class="job-left">
+            <div class="job-company">Acero Digital</div>
+            <div class="job-role">SEO Specialist (On-Page, Technical &amp; Off-Page)</div>
+          </div>
+          <div class="job-right">
+            <div class="job-period">Chiswick, UK</div>
+            <div class="job-loc">Multi-Role</div>
+          </div>
+        </div>
+        <ul class="job-bullets">
+          <li>Led on-page and technical SEO initiatives — improving site structure, indexing, and overall search visibility</li>
+          <li>Implemented schema markup, metadata optimisation, and internal linking frameworks at scale</li>
+          <li>Conducted technical audits identifying and resolving performance bottlenecks across multiple client sites</li>
+          <li>Designed and executed link acquisition strategies to strengthen domain authority in competitive niches</li>
+          <li>Managed outreach campaigns contributing to improved rankings and authority signals across multiple platforms</li>
+          <li>Supported organic social growth through content planning and performance tracking aligned with SEO goals</li>
+        </ul>
+      </div>
+
+      <div class="job-card reveal reveal-d2">
+        <div class="job-header">
+          <div class="job-left">
+            <div class="job-company">JeetWin</div>
+            <div class="job-role">Digital Marketing Team Lead</div>
+          </div>
+          <div class="job-right">
+            <div class="job-period">India</div>
+            <div class="job-loc">Team Lead</div>
+          </div>
+        </div>
+        <ul class="job-bullets">
+          <li>Established and led the entire SEO function from scratch — on-page, off-page, and technical execution</li>
+          <li>Defined the SEO roadmap and implemented strategies that improved traffic, rankings, and conversions measurably</li>
+          <li>Led social media strategy and execution, improving engagement, consistency, and brand visibility across platforms</li>
+          <li>Mentored and managed team members, improving delivery quality and output consistency across all channels</li>
+          <li>Partnered with developers, designers, and content teams to ensure SEO best practices across all digital assets</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AREAS OF EXPERTISE -->
+<section id="expertise" class="section">
+  <div class="wrap">
+    <p class="sec-eyebrow">What I Do</p>
+    <h2 class="sec-title">Areas of Expertise</h2>
+    <p class="expertise-intro">Full-stack digital marketing — from technical SEO to brand identity. Each skill below has been applied end-to-end in real campaigns.</p>
+    <div class="expertise-grid reveal">
+      <div class="exp-card">
+        <div class="exp-card-icon icon-orange">🔍</div>
+        <div class="exp-card-title">Technical SEO</div>
+        <div class="exp-card-desc">Site audits, schema markup, Core Web Vitals, indexing, crawlability — deep technical execution.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-icon icon-green">📄</div>
+        <div class="exp-card-title">On-Page SEO &amp; Content Strategy</div>
+        <div class="exp-card-desc">Keyword research, intent mapping, scalable content frameworks, editorial direction.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-icon icon-blue">🔗</div>
+        <div class="exp-card-title">Off-Page SEO &amp; Link Building</div>
+        <div class="exp-card-desc">Authority growth, outreach campaigns, link acquisition, domain strength in competitive niches.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-icon icon-orange">📍</div>
+        <div class="exp-card-title">Local SEO &amp; Google Business Profile</div>
+        <div class="exp-card-desc">GBP optimisation, local citation building, map pack visibility, review strategy.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-icon icon-green">📱</div>
+        <div class="exp-card-title">Social Media Management</div>
+        <div class="exp-card-desc">Content calendars, platform strategy, organic growth, performance tracking, brand voice.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-icon icon-blue">📊</div>
+        <div class="exp-card-title">SEO Analytics &amp; Reporting</div>
+        <div class="exp-card-desc">GSC, GA4, SEMrush, Ahrefs — data interpretation, dashboards, and actionable insights.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-icon icon-orange">✍️</div>
+        <div class="exp-card-title">Copywriting</div>
+        <div class="exp-card-desc">SEO-driven copy, ad creative, email sequences, landing pages, and brand messaging.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-icon icon-green">🎨</div>
+        <div class="exp-card-title">Graphic Design</div>
+        <div class="exp-card-desc">Adobe Illustrator, social media creatives, marketing collateral, consistent brand identity.</div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-card-icon icon-blue">🔎</div>
+        <div class="exp-card-title">Keyword Research &amp; Competitor Analysis</div>
+        <div class="exp-card-desc">Gap analysis, SERP intent modelling, competitor backlink profiling, opportunity mapping.</div>
+      </div>
+    </div>
+
+    <div class="tools-section reveal">
+      <div class="tools-label">Tools &amp; Platforms</div>
+      <div class="tools-chips">
+        <div class="tool-chip"><div class="tool-dot" style="background:#4285F4"></div>Google Ads</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:#1877F2"></div>Meta Business Suite</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:#34A853"></div>Google Search Console</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:#FF6D00"></div>SEMrush</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:#F97316"></div>Ahrefs</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:#FF0000"></div>Adobe Illustrator</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY HIGHLIGHTS -->
+<section id="highlights" class="section">
+  <div class="wrap">
+    <p class="sec-eyebrow">Impact Delivered</p>
+    <h2 class="sec-title">Key Highlights</h2>
+    <p class="highlights-intro">Proven outcomes across SEO, social media, and team leadership — built over 5+ years in the field.</p>
+    <div class="highlights-grid reveal">
+      <div class="hl-card">
+        <div class="hl-card-title">Sustained Organic Growth</div>
+        <div class="hl-card-body">Drove consistent organic growth by aligning content, technical SEO, and search intent strategies across multiple projects and verticals.</div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-card-title">Keyword Rankings &amp; Lead Pipeline</div>
+        <div class="hl-card-body">Led SEO campaigns that improved keyword rankings, increased qualified traffic, and directly supported lead generation pipelines.</div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-card-title">Built SEO Function from Scratch</div>
+        <div class="hl-card-body">Founded and scaled a full SEO function — establishing repeatable processes, mentoring team members, and delivering cross-channel consistency.</div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-card-title">Technical Site Performance</div>
+        <div class="hl-card-body">Improved site performance through structured on-page optimisation, internal linking frameworks, and targeted technical enhancements.</div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-card-title">Social Media Engagement</div>
+        <div class="hl-card-body">Managed social content strategy and execution across platforms — measurably improving engagement rates and overall brand visibility.</div>
+      </div>
+      <div class="hl-card">
+        <div class="hl-card-title">Consistent Brand Creation</div>
+        <div class="hl-card-body">Designed marketing and social creatives that ensured consistent branding, elevated content quality, and improved campaign performance.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMIC BACKGROUND -->
+<section id="academic" class="section">
+  <div class="wrap">
+    <p class="sec-eyebrow">Education</p>
+    <h2 class="sec-title">Academic Background</h2>
+    <p class="sec-sub">Formal education combined with industry certifications across digital marketing.</p>
+    <div class="academic-grid reveal">
+      <div class="acad-card">
+        <div class="acad-label">University Degree</div>
+        <div class="acad-degree">MBA — Marketing</div>
+        <div class="acad-field">Marketing Specialisation</div>
+        <div class="acad-school">Uttarakhand Technical University</div>
+      </div>
+      <div class="acad-card">
+        <div class="acad-label">Professional Certifications</div>
+        <div class="cert-list">
+          <div class="cert-row">
+            <div class="cert-check">✓</div>
+            Fundamentals of Digital Marketing — Google Digital Garage
+          </div>
+          <div class="cert-row">
+            <div class="cert-check">✓</div>
+            Adobe Illustrator Mega Course — 92learns
+          </div>
+          <div class="cert-row">
+            <div class="cert-check">✓</div>
+            Advanced Digital Marketing
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     SOCIAL MEDIA CASE STUDIES
+     ══════════════════════════════ -->
+<!-- ══════════════════════════════
+     SOCIAL MEDIA MANAGEMENT
+     ══════════════════════════════ -->
+<section id="social-cases" class="section">
+  <div class="wrap">
+    <p class="sec-eyebrow reveal">Social Media</p>
+    <h2 class="sec-title reveal reveal-d1">Social Media Management</h2>
+    <p class="sec-sub reveal reveal-d2">Managing Instagram presence for brands across hospitality, digital, and lifestyle — content strategy, creative direction, and community engagement.</p>
+
+    <div class="sm-grid reveal">
+
+      <a class="sm-card" href="https://www.instagram.com/acero.digital" target="_blank" rel="noopener">
+        <div class="sm-card-header">
+          <div class="sm-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2);"><span>AD</span></div>
+          <div class="sm-info">
+            <div class="sm-handle">@acero.digital</div>
+            <div class="sm-name">Acero Digital</div>
+            <div class="sm-niche">Digital Marketing Agency · UK</div>
+          </div>
+          <div class="sm-ig-badge">Instagram</div>
+        </div>
+        <div class="sm-tags">
+          <span class="sm-tag">Content Strategy</span>
+          <span class="sm-tag">Brand Voice</span>
+          <span class="sm-tag">Agency</span>
+        </div>
+        <div class="sm-desc">Social media management and content strategy for a full-service digital marketing agency in Chiswick, UK — post design, caption copywriting, and engagement strategy to grow the brand's online authority.</div>
+        <div class="sm-cta">View Profile on Instagram ↗</div>
+      </a>
+
+      <a class="sm-card" href="https://www.instagram.com/cutsandcoffee.np/" target="_blank" rel="noopener">
+        <div class="sm-card-header">
+          <div class="sm-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c);"><span>CC</span></div>
+          <div class="sm-info">
+            <div class="sm-handle">@cutsandcoffee.np</div>
+            <div class="sm-name">Cuts &amp; Coffee</div>
+            <div class="sm-niche">Barbershop &amp; Café · Nepal</div>
+          </div>
+          <div class="sm-ig-badge">Instagram</div>
+        </div>
+        <div class="sm-tags">
+          <span class="sm-tag">Lifestyle</span>
+          <span class="sm-tag">Local Brand</span>
+          <span class="sm-tag">Reels</span>
+        </div>
+        <div class="sm-desc">Built and managed the Instagram presence for a trendy barbershop-café hybrid in Nepal — lifestyle content, behind-the-scenes Reels, and promotional campaigns to grow local brand awareness and foot traffic.</div>
+        <div class="sm-cta">View Profile on Instagram ↗</div>
+      </a>
+
+      <a class="sm-card" href="https://www.instagram.com/rashyaa_the.secret/" target="_blank" rel="noopener">
+        <div class="sm-card-header">
+          <div class="sm-avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe);"><span>RS</span></div>
+          <div class="sm-info">
+            <div class="sm-handle">@rashyaa_the.secret</div>
+            <div class="sm-name">Rashyaa The Secret</div>
+            <div class="sm-niche">Fashion &amp; Lifestyle</div>
+          </div>
+          <div class="sm-ig-badge">Instagram</div>
+        </div>
+        <div class="sm-tags">
+          <span class="sm-tag">Fashion</span>
+          <span class="sm-tag">Aesthetic</span>
+          <span class="sm-tag">Feed Curation</span>
+        </div>
+        <div class="sm-desc">Developed a cohesive Instagram aesthetic and content strategy for a fashion and lifestyle brand — visual identity, caption strategy, and feed curation to build a loyal, engaged following.</div>
+        <div class="sm-cta">View Profile on Instagram ↗</div>
+      </a>
+
+      <a class="sm-card" href="https://www.instagram.com/viewbrewrestaurant/" target="_blank" rel="noopener">
+        <div class="sm-card-header">
+          <div class="sm-avatar" style="background:linear-gradient(135deg,#f7971e,#ffd200);"><span>VB</span></div>
+          <div class="sm-info">
+            <div class="sm-handle">@viewbrewrestaurant</div>
+            <div class="sm-name">ViewBrew Restaurant</div>
+            <div class="sm-niche">Restaurant &amp; Hospitality</div>
+          </div>
+          <div class="sm-ig-badge">Instagram</div>
+        </div>
+        <div class="sm-tags">
+          <span class="sm-tag">Food &amp; Bev</span>
+          <span class="sm-tag">Hospitality</span>
+          <span class="sm-tag">Promotions</span>
+        </div>
+        <div class="sm-desc">Managed Instagram for a restaurant — food photography curation, promotional content, seasonal campaign posts, stories strategy, and community management to drive reservations and brand visibility.</div>
+        <div class="sm-cta">View Profile on Instagram ↗</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     GRAPHIC DESIGN
+     ══════════════════════════════ -->
+<section id="design-cases" class="section" style="background:#1F1E33">
+  <div class="wrap">
+    <p class="sec-eyebrow reveal">Graphic Design</p>
+    <h2 class="sec-title reveal reveal-d1">Design &amp; Creative Work</h2>
+    <p class="sec-sub reveal reveal-d2">Social media creatives, campaign visuals, and brand content — crafted in Adobe Illustrator and Photoshop. Click any post to view on Instagram.</p>
+
+    <div class="design-grid reveal">
+
+      <a class="design-post-card" href="https://www.instagram.com/p/C8WyFtRvvQa/" target="_blank" rel="noopener">
+        <div class="design-post-thumb" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);">
+          <div class="design-post-overlay"><span>View on Instagram ↗</span></div>
+          <div class="dps-wrap"><div class="dps dps1"></div><div class="dps dps2"></div><div class="dps dps3"></div></div>
+        </div>
+        <div class="design-post-body">
+          <div class="design-post-tags"><span class="design-post-tag">Social Creative</span><span class="design-post-tag">Campaign</span></div>
+          <p class="design-post-desc">Campaign visual — social media graphic for digital marketing content with bold typography.</p>
+        </div>
+      </a>
+
+      <a class="design-post-card" href="https://www.instagram.com/p/DBFwPptqIti/?img_index=1" target="_blank" rel="noopener">
+        <div class="design-post-thumb" style="background:linear-gradient(135deg,#2d1b69 0%,#11998e 100%);">
+          <div class="design-post-overlay"><span>View on Instagram ↗</span></div>
+          <div class="dps-wrap"><div class="dps dps2"></div><div class="dps dps4"></div></div>
+        </div>
+        <div class="design-post-body">
+          <div class="design-post-tags"><span class="design-post-tag">Brand Visual</span><span class="design-post-tag">Carousel</span></div>
+          <p class="design-post-desc">Multi-image carousel — layered brand visual with structured colour composition and hierarchy.</p>
+        </div>
+      </a>
+
+      <a class="design-post-card" href="https://www.instagram.com/p/CPXHOg2DeJ0/" target="_blank" rel="noopener">
+        <div class="design-post-thumb" style="background:linear-gradient(135deg,#e8521a 0%,#f7971e 100%);">
+          <div class="design-post-overlay"><span>View on Instagram ↗</span></div>
+          <div class="dps-wrap"><div class="dps dps3"></div><div class="dps dps1" style="opacity:.2"></div></div>
+        </div>
+        <div class="design-post-body">
+          <div class="design-post-tags"><span class="design-post-tag">Promotional</span><span class="design-post-tag">Marketing</span></div>
+          <p class="design-post-desc">Promotional marketing graphic — high-contrast design built for maximum feed impact and reach.</p>
+        </div>
+      </a>
+
+      <a class="design-post-card" href="https://www.instagram.com/p/B8tk-f0FGp1/" target="_blank" rel="noopener">
+        <div class="design-post-thumb" style="background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);">
+          <div class="design-post-overlay"><span>View on Instagram ↗</span></div>
+          <div class="dps-wrap"><div class="dps dps4"></div><div class="dps dps2" style="opacity:.2"></div></div>
+        </div>
+        <div class="design-post-body">
+          <div class="design-post-tags"><span class="design-post-tag">Brand Content</span><span class="design-post-tag">Typography</span></div>
+          <p class="design-post-desc">Brand content graphic — typographic layout with visual hierarchy and intentional tone of voice.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <p class="mockup-cta-note reveal" style="margin-top:28px;">All designs created in Adobe Illustrator &amp; Photoshop. <a href="mailto:digitalaadesh@gmail.com" style="color:var(--orange);text-decoration:none;font-weight:500;">Get in touch</a> to discuss design projects.</p>
+  </div>
+</section>
+     ══════════════════════════════════════ -->
+<div id="results">
+
+  <!-- ── SECTION INTRO ── -->
+  <div style="max-width:var(--max);margin:0 auto;padding:52px 32px 40px;">
+    <p style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Real Work. Real Results.</p>
+    <h2 style="font-family:var(--serif);font-size:30px;color:var(--ink);letter-spacing:-.5px;margin-bottom:8px;">Case Studies</h2>
+    <p style="font-size:14px;color:var(--accent);max-width:520px;">Three full case studies across different industries — each covering the brief, the need, the strategic plan, execution detail, and measurable results.</p>
+  </div>
+
+  <!-- ════════════════════════════════════
+       CASE STUDY 1 — MURRAY RIVER SALT
+       ════════════════════════════════════ -->
+  <div class="case-study" id="cs-murray">
+
+    <!-- HERO -->
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <div class="cs-breadcrumb">Case Studies <span>/</span> Murray River Salt</div>
+        <h2 class="cs-hero-title">Discover Tasty SEO with Murray River Salt — 970% Backlink Growth</h2>
+        <p class="cs-hero-intro">Murray River Salt is one of Australia's most loved premium natural salt brands. With a strong retail presence but limited organic search authority, the challenge was to grow domain authority through a structured off-page SEO and backlink acquisition strategy that connected the brand with its target audience online.</p>
+        <img src="murray_cover.jpg" alt="Murray River Salt" class="cs-hero-cover">
+      </div>
+      <div class="cs-hero-stats">
+        <div class="cs-stat-pill">
+          <div class="cs-stat-pill-num">970%</div>
+          <div class="cs-stat-pill-label">Backlink growth</div>
+        </div>
+        <div class="cs-stat-pill">
+          <div class="cs-stat-pill-num">21.4%</div>
+          <div class="cs-stat-pill-label">Increase in referring domains</div>
+        </div>
+        <div class="cs-stat-pill">
+          <div class="cs-stat-pill-num">Top 5</div>
+          <div class="cs-stat-pill-label">Rankings for core product terms</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="cs-body" style="padding-top:0;">
+
+      <!-- ── SUMMARY CARD (image 2 style) ── -->
+      <!-- SUMMARY CARD -->
+      <div class="cs-summary-card">
+        <div class="cs-card-header">
+          <div class="cs-card-top">
+            <img src="murray_logo.jpg" alt="Murray River Salt Logo" class="cs-card-icon-img">
+            <div>
+              <div class="cs-card-name">Murray River Salt</div>
+              <div class="cs-card-meta">Australia <span class="cs-card-meta-dot">·</span> Off-Page SEO &amp; Backlink Growth</div>
+            </div>
+          </div>
+          <div class="cs-pill-row">
+            <span class="cs-pill cs-pill-primary">Backlink Growth</span>
+            <span class="cs-pill cs-pill-neutral">Off-Page SEO</span>
+            <span class="cs-pill cs-pill-neutral">Domain Authority</span>
+          </div>
+        </div>
+        <div class="cs-cao">
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">▲</span> Challenge</div>
+            <div class="cs-cao-body">Murray River Salt had strong brand recognition offline but a thin backlink profile online. Competitors were outranking them for core product terms despite the brand's premium quality and unique Australian origin story.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">⚙</span> Approach</div>
+            <div class="cs-cao-body">Built a targeted outreach strategy to food, lifestyle, and culinary publications. Created linkable brand assets and a personalised outreach sequence to earn editorial backlinks from high-authority domains relevant to the brand's audience.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">↗</span> Outcome</div>
+            <div class="cs-cao-body">970% backlink growth and a 21.4% increase in referring domains. Core product terms entered the Top 5 in Google, and the brand was featured across national food and lifestyle publications — permanently improving organic visibility.</div>
+          </div>
+        </div>
+        <div class="cs-metrics-strip" style="grid-template-columns:repeat(5,1fr);">
+          <div class="cs-metric-cell"><div class="cs-metric-val">970% <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Backlink Growth</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">21.4% <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Referring Domains</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">Top 5</div><div class="cs-metric-lbl">Product Rankings</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">+63% <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Organic Impressions</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">+8 DR</div><div class="cs-metric-lbl">Domain Rating Gain</div></div>
+        </div>
+      </div>
+
+      <!-- READ MORE BUTTON -->
+      <div class="cs-read-wrap">
+        <button class="cs-read-btn" onclick="toggleCS('murray')">Read Case Study <span class="cs-read-arrow" id="murray-arrow">↓</span></button>
+      </div>
+
+      <!-- EXPANDABLE DETAILS -->
+      <div class="cs-details" id="murray-details">
+        <div class="cs-section">
+          <div class="cs-section-label">About</div>
+          <div class="cs-about-grid">
+            <div>
+              <h3 class="cs-section-title">A Great Sprinkling of All That's Good</h3>
+              <div class="cs-section-body">
+                <p>Murray River Salt is a premium Australian salt brand well-known in kitchens and restaurants all around the world. Harvested from ancient underground water reserves in the Murray-Darling Basin, they are respected for their quality and natural production process.</p>
+                <p>The brand's selling point was that they are the only natural salt-selling company — acquiring top links and driving up their reach was the number-one goal.</p>
+              </div>
+            </div>
+            <img src="murray_cover.jpg" alt="Murray River Salt" style="width:100%;border-radius:12px;object-fit:cover;aspect-ratio:4/3;">
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Need</div>
+          <h3 class="cs-section-title">What Murray River Salt Actually Needed</h3>
+          <div class="cs-section-body"><p>Murray River Salt was well-known offline but struggling to convert that brand equity into online search authority. Their backlink profile was thin, referring domain count was low, and competitors were outranking them for core product and brand terms in Google.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Build brand awareness and establish authority in premium Australian natural salt</span></li>
+            <li><div class="cs-num">2</div><span>Increase backlinks through high-quality outreach to food, lifestyle, and culinary publications</span></li>
+            <li><div class="cs-num">3</div><span>Increase visibility to encourage and promote distribution and product discovery across Australia</span></li>
+            <li><div class="cs-num">4</div><span>Improve communication to promote products online to reach new audiences</span></li>
+          </ul>
+          <div class="cs-quote" style="margin-top:28px;">
+            <div class="cs-quote-text">"Murray River Salt was the perfect brand to work with — a genuine Australian product with a great story. SEO just needed to tell it louder."</div>
+            <div class="cs-quote-attr">— Aadesh Dhital, Off-Page SEO Specialist</div>
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Plan</div>
+          <h3 class="cs-section-title">Strategic Link Building Approach</h3>
+          <div class="cs-section-body"><p>The strategy centred on building a high-quality, diverse backlink profile through targeted outreach to relevant food, cooking, lifestyle, and sustainability publications.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Identify high-authority food, recipe, nutrition, and lifestyle websites for outreach — prioritising Australian and international culinary domains</span></li>
+            <li><div class="cs-num">2</div><span>Develop outreach campaigns to promote the brand's story and get Murray River Salt featured on relevant third-party sites</span></li>
+            <li><div class="cs-num">3</div><span>Create linkable assets — product guides, recipe content, and brand story pieces — that give publishers a genuine reason to link back</span></li>
+            <li><div class="cs-num">4</div><span>Monitor referring domain growth monthly and adjust outreach targeting based on which niches were delivering highest-quality links</span></li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Execution</div>
+          <h3 class="cs-section-title">How the Campaign Was Run</h3>
+          <div class="cs-exec-subhead">Outreach Campaign Design</div>
+          <div class="cs-section-body"><p>I built personalised outreach sequences targeting food bloggers, culinary journalists, recipe websites, and gourmet food retailers across Australia and internationally. Each email was customised to the recipient's content angle — positioning Murray River Salt as a premium ingredient story rather than a generic placement request.</p></div>
+          <div class="cs-exec-subhead">Linkable Asset Creation</div>
+          <div class="cs-section-body"><p>I supported the creation of linkable content — including a brand origin story, sustainability credentials page, and a recipe hub featuring Murray River Salt as the hero ingredient. These became the foundation for outreach conversations and natural link magnets.</p></div>
+          <div class="cs-exec-subhead">Referring Domain Diversification</div>
+          <div class="cs-section-body"><p>Links were acquired across food media, health and wellness, sustainability, cooking education, and retail distribution websites — building a natural-looking, topically relevant backlink profile that Google rewards with improved authority.</p></div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Results</div>
+          <h3 class="cs-section-title">Measurable Impact Delivered</h3>
+          <div class="cs-section-body"><p>The off-page SEO campaign delivered transformational results. From a thin backlink profile, the brand grew into one of the most authoritative premium salt brands in organic search.</p></div>
+          <div class="cs-results-strip" style="margin-top:24px;">
+            <div class="cs-results-strip-title">By the Numbers</div>
+            <div class="cs-results-grid">
+              <div class="cs-result-cell"><div class="cs-result-num positive">970%</div><div class="cs-result-label">Backlink growth</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">21.4%</div><div class="cs-result-label">Increase in referring domains</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">Top 5</div><div class="cs-result-label">Google rankings for core product terms</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+63%</div><div class="cs-result-label">Organic search impressions</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num highlight">+8 DR</div><div class="cs-result-label">Domain rating improvement</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">Nat'l</div><div class="cs-result-label">Featured in national publications</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- end case study 1 -->
+
+  <div class="cs-divider"></div>
+
+  <!-- ════════════════════════════════════
+       CASE STUDY 2 — COREPLUS
+       ════════════════════════════════════ -->
+  <div class="case-study" id="cs-coreplus">
+
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <div class="cs-breadcrumb">Case Studies <span>/</span> CorePlus</div>
+        <h2 class="cs-hero-title">How SEO Grew CorePlus Nationwide — 283% Increase in Top 3 Keyword Rankings</h2>
+        <p class="cs-hero-intro">CorePlus is a fast-growing wellness brand offering physical and mental health services across Australia. With great studio locations but limited online visibility, they needed SEO to drive national awareness, increase bookings, and dominate local search in every market they operate in.</p>
+        <img src="coreplus_cover.jpg" alt="CorePlus" class="cs-hero-cover">
+      </div>
+      <div class="cs-hero-stats">
+        <div class="cs-stat-pill">
+          <div class="cs-stat-pill-num">283%</div>
+          <div class="cs-stat-pill-label">Increase in Top 3 keyword rankings</div>
+        </div>
+        <div class="cs-stat-pill">
+          <div class="cs-stat-pill-num">301%</div>
+          <div class="cs-stat-pill-label">Increase in non-branded traffic</div>
+        </div>
+        <div class="cs-stat-pill">
+          <div class="cs-stat-pill-num">20%</div>
+          <div class="cs-stat-pill-label">Increase in organic bookings YoY</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body" style="padding-top:0;">
+
+      <!-- ── SUMMARY CARD ── -->
+      <div class="cs-summary-card">
+        <div class="cs-card-header">
+          <div class="cs-card-top">
+            <img src="coreplus_logo.jpg" alt="CorePlus Logo" class="cs-card-icon-img">
+            <div>
+              <div class="cs-card-name">CorePlus</div>
+              <div class="cs-card-meta">
+                Australia — National
+                <span class="cs-card-meta-dot">·</span>
+                Wellness Brand SEO
+              </div>
+            </div>
+          </div>
+          <div class="cs-pill-row">
+            <span class="cs-pill cs-pill-primary">Local SEO</span>
+            <span class="cs-pill cs-pill-neutral">Content Authority</span>
+            <span class="cs-pill cs-pill-neutral">GBP Optimisation</span>
+          </div>
+        </div>
+        <div class="cs-cao">
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">▲</span> Challenge</div>
+            <div class="cs-cao-body">CorePlus was over-reliant on branded search and losing new customers to competitors ranking higher for local Pilates and yoga search terms. Each studio location lacked independent search visibility in its own suburb and city market.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">⚙</span> Approach</div>
+            <div class="cs-cao-body">Built dedicated location pages for every studio, optimised Google Business Profiles nationally, developed topical wellness content for non-branded authority, and resolved technical SEO issues blocking key pages from ranking in local and national search.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">↗</span> Outcome</div>
+            <div class="cs-cao-body">283% increase in Top 3 keyword rankings, 301% growth in non-branded organic traffic, and a 20% year-on-year increase in organic bookings — demonstrating that SEO was now delivering new customers at scale across every location.</div>
+          </div>
+        </div>
+        <div class="cs-metrics-strip" style="grid-template-columns:repeat(5,1fr);">
+          <div class="cs-metric-cell">
+            <div class="cs-metric-val">283% <span class="cs-arr-up">↑</span></div>
+            <div class="cs-metric-lbl">Top 3 Rankings</div>
+          </div>
+          <div class="cs-metric-cell">
+            <div class="cs-metric-val">301% <span class="cs-arr-up">↑</span></div>
+            <div class="cs-metric-lbl">Non-Branded Traffic</div>
+          </div>
+          <div class="cs-metric-cell">
+            <div class="cs-metric-val">20% <span class="cs-arr-up">↑</span></div>
+            <div class="cs-metric-lbl">Organic Bookings YoY</div>
+          </div>
+          <div class="cs-metric-cell">
+            <div class="cs-metric-val">+45% <span class="cs-arr-up">↑</span></div>
+            <div class="cs-metric-lbl">Maps Impressions</div>
+          </div>
+          <div class="cs-metric-cell">
+            <div class="cs-metric-val">+38% <span class="cs-arr-up">↑</span></div>
+            <div class="cs-metric-lbl">Local Pack Appearances</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- READ MORE BUTTON -->
+      <div class="cs-read-wrap">
+        <button class="cs-read-btn" onclick="toggleCS('coreplus')">Read Case Study <span class="cs-read-arrow" id="coreplus-arrow">↓</span></button>
+      </div>
+
+      <!-- EXPANDABLE DETAILS -->
+      <div class="cs-details" id="coreplus-details">
+        <div class="cs-section">
+          <div class="cs-section-label">About</div>
+          <div class="cs-about-grid">
+            <div>
+              <h3 class="cs-section-title">About CorePlus</h3>
+              <div class="cs-section-body">
+                <p>CorePlus is a nationwide wellness brand offering Pilates, yoga, and mindful movement studios across Melbourne, Sydney, Brisbane, and Adelaide. The brand serves a growing community around physical and mental wellness, focusing on a welcoming community for people aged 20–50 seeking balance, flexibility, and mental clarity.</p>
+                <p>Despite excellent studio facilities and a loyal in-person community, CorePlus was significantly underperforming in organic search — losing potential new customers to competitors who ranked higher for local and national wellness search terms.</p>
+              </div>
+            </div>
+            <img src="coreplus_cover.jpg" alt="CorePlus" style="width:100%;border-radius:12px;object-fit:cover;aspect-ratio:4/3;">
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Need</div>
+          <h3 class="cs-section-title">CorePlus's Core SEO Challenges</h3>
+          <div class="cs-section-body"><p>CorePlus faced strategic challenges that prevented it from capitalising on the growing demand for wellness services in Australia. Their digital presence wasn't matching the quality of their in-studio offering.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Grow non-branded organic traffic — over-reliant on people who already knew the CorePlus name</span></li>
+            <li><div class="cs-num">2</div><span>Increase bookings through organic search by improving local visibility across all studio locations nationally</span></li>
+            <li><div class="cs-num">3</div><span>Build topical authority across wellness, Pilates, yoga, and mindful movement to outrank competitors</span></li>
+            <li><div class="cs-num">4</div><span>Improve site structure so each studio location could rank independently in its own local market</span></li>
+          </ul>
+          <div class="cs-quote" style="margin-top:28px;">
+            <div class="cs-quote-text">"CorePlus had a brilliant product and a passionate community — the SEO strategy just needed to make sure the whole country could find them."</div>
+            <div class="cs-quote-attr">— Aadesh Dhital, SEO Strategist</div>
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Plan</div>
+          <h3 class="cs-section-title">National SEO Growth Strategy</h3>
+          <div class="cs-section-body"><p>The strategy combined technical site improvements, location-specific page optimisation, content authority building, and Google Business Profile management — all working together to drive national rankings and hyper-local bookings across every CorePlus studio.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Comprehensive technical SEO audit to fix site structure, speed, crawl, and indexing issues</span></li>
+            <li><div class="cs-num">2</div><span>Build dedicated location pages for each studio targeting suburb-level and city-level search terms</span></li>
+            <li><div class="cs-num">3</div><span>Develop high-quality topical content across Pilates, yoga, mental wellness, and movement</span></li>
+            <li><div class="cs-num">4</div><span>Optimise and manage Google Business Profiles for each studio to maximise local pack rankings</span></li>
+            <li><div class="cs-num">5</div><span>Build quality backlinks from health, fitness, wellness, and lifestyle publications</span></li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Execution</div>
+          <h3 class="cs-section-title">Delivery in Detail</h3>
+          <div class="cs-exec-subhead">Location SEO at Scale</div>
+          <div class="cs-section-body"><p>I built and optimised individual location pages for every CorePlus studio — each targeting suburb, city, and service-level keyword combinations with locally relevant content, embedded maps, and schema markup for local business entities.</p></div>
+          <div class="cs-exec-subhead">Google Business Profile Management</div>
+          <div class="cs-section-body"><p>Each studio's GBP was fully audited and optimised — business categories, service listings, opening hours, photos, Q&As, and post cadence aligned to maximise local pack visibility and directly drive online bookings.</p></div>
+          <div class="cs-exec-subhead">Content & Topical Authority</div>
+          <div class="cs-section-body"><p>A content strategy was developed targeting awareness and consideration queries — articles on Pilates benefits, yoga for beginners, mental health through movement, and studio comparison guides — building topical authority at national level.</p></div>
+          <div class="cs-exec-subhead">Technical SEO Improvements</div>
+          <div class="cs-section-body"><p>Full technical audit resolved page speed, Core Web Vitals, canonical tags, and duplicate content issues. Internal linking was restructured to flow equity from the homepage to location and service pages.</p></div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Results</div>
+          <h3 class="cs-section-title">CorePlus Grew Nationwide</h3>
+          <div class="cs-section-body"><p>Non-branded organic traffic grew by 301% — demonstrating the brand was reaching entirely new audiences. Bookings grew organically, and keyword rankings across all studio locations improved dramatically.</p></div>
+          <div class="cs-results-strip" style="margin-top:24px;">
+            <div class="cs-results-strip-title">By the Numbers</div>
+            <div class="cs-results-grid">
+              <div class="cs-result-cell"><div class="cs-result-num positive">283%</div><div class="cs-result-label">Increase in Top 3 keyword rankings</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">301%</div><div class="cs-result-label">Increase in non-branded organic traffic</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">20%</div><div class="cs-result-label">Increase in organic bookings YoY</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+45%</div><div class="cs-result-label">Growth in Google Maps impressions</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num highlight">Nat'l</div><div class="cs-result-label">Top 5 for national wellness terms</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+38%</div><div class="cs-result-label">Local pack appearances across all locations</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- end case study 2 -->
+
+  <div class="cs-divider"></div>
+
+  <!-- ════════════════════════════════════
+       CASE STUDY 3 — WHICHCAR
+       ════════════════════════════════════ -->
+  <div class="case-study" id="cs-whichcar">
+
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <div class="cs-breadcrumb">Case Studies <span>/</span> WhichCar</div>
+        <h2 class="cs-hero-title">Taking Optimisation Into the Next Gear with WhichCar — 24.7% Increase in Organic Traffic</h2>
+        <p class="cs-hero-intro">WhichCar is Australia's leading automotive media brand — the go-to destination for car reviews, comparisons, news, and buying advice. With enormous content volume and a highly competitive SERP landscape, the SEO challenge was all about traffic control: optimising at scale without disrupting what was already working.</p>
+        <img src="whichcar_cover.jpg" alt="WhichCar" class="cs-hero-cover">
+      </div>
+      <div class="cs-hero-stats">
+        <div class="cs-stat-pill">
+          <div class="cs-stat-pill-num">24.7%</div>
+          <div class="cs-stat-pill-label">Increase in organic traffic</div>
+        </div>
+        <div class="cs-stat-pill">
+          <div class="cs-stat-pill-num">19.6%</div>
+          <div class="cs-stat-pill-label">Increase in keyword base</div>
+        </div>
+        <div class="cs-stat-pill">
+          <div class="cs-stat-pill-num">Top 3</div>
+          <div class="cs-stat-pill-label">Rankings for high-intent car terms</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body" style="padding-top:0;">
+
+      <!-- ── SUMMARY CARD ── -->
+      <div class="cs-summary-card">
+        <div class="cs-card-header">
+          <div class="cs-card-top">
+            <img src="whichcar_logo.jpg" alt="WhichCar Logo" class="cs-card-icon-img" style="background:#fff;">
+            <div>
+              <div class="cs-card-name">WhichCar</div>
+              <div class="cs-card-meta">
+                Australia
+                <span class="cs-card-meta-dot">·</span>
+                Automotive Media SEO
+              </div>
+            </div>
+          </div>
+          <div class="cs-pill-row">
+            <span class="cs-pill cs-pill-primary">On-Page SEO</span>
+            <span class="cs-pill cs-pill-neutral">Keyword Growth</span>
+            <span class="cs-pill cs-pill-neutral">Editorial SEO</span>
+          </div>
+        </div>
+        <div class="cs-cao">
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">▲</span> Challenge</div>
+            <div class="cs-cao-body">WhichCar had massive content volume and existing authority but was not maximising its organic traffic potential. Pages were underoptimised, the editorial team lacked SEO skills, and high-value pages were sitting on page 2 without a clear path to page 1.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">⚙</span> Approach</div>
+            <div class="cs-cao-body">Upskilled the editorial team on SEO fundamentals, optimised title tags and metadata across high-traffic car review and comparison pages, conducted keyword gap analysis to expand the ranking footprint, and targeted page-2 pages for quick-win improvements.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">↗</span> Outcome</div>
+            <div class="cs-cao-body">Exceeded the 20% organic traffic growth target with 24.7% growth, expanded the total keyword base by 19.6%, and secured Top 3 rankings for high-intent car research terms — all within a 3-month campaign window.</div>
+          </div>
+        </div>
+        <div class="cs-metrics-strip" style="grid-template-columns:repeat(5,1fr);">
+          <div class="cs-metric-cell">
+            <div class="cs-metric-val">24.7% <span class="cs-arr-up">↑</span></div>
+            <div class="cs-metric-lbl">Organic Traffic Growth</div>
+          </div>
+          <div class="cs-metric-cell">
+            <div class="cs-metric-val">19.6% <span class="cs-arr-up">↑</span></div>
+            <div class="cs-metric-lbl">Keyword Base</div>
+          </div>
+          <div class="cs-metric-cell">
+            <div class="cs-metric-val">Top 3</div>
+            <div class="cs-metric-lbl">Car Research Rankings</div>
+          </div>
+          <div class="cs-metric-cell">
+            <div class="cs-metric-val">+32% <span class="cs-arr-up">↑</span></div>
+            <div class="cs-metric-lbl">Click-Through Rate</div>
+          </div>
+          <div class="cs-metric-cell">
+            <div class="cs-metric-val">3 mo <span class="cs-arr-down">↓</span></div>
+            <div class="cs-metric-lbl">Time to Results</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- READ MORE BUTTON -->
+      <div class="cs-read-wrap">
+        <button class="cs-read-btn" onclick="toggleCS('whichcar')">Read Case Study <span class="cs-read-arrow" id="whichcar-arrow">↓</span></button>
+      </div>
+
+      <!-- EXPANDABLE DETAILS -->
+      <div class="cs-details" id="whichcar-details">
+        <div class="cs-section">
+          <div class="cs-section-label">About</div>
+          <div class="cs-about-grid">
+            <div>
+              <h3 class="cs-section-title">Traffic Control</h3>
+              <div class="cs-section-body">
+                <p>WhichCar is Australia's most trusted automotive media brand. Car buyers enthusiastically rely on WhichCar's car-buying expertise. They needed a team that could provide professionals with proficiency with programming, reviews, videos, sales orders, and of course, online content strategy.</p>
+                <p>As one of Australia's largest content publishers in the automotive category, WhichCar required SEO management that could operate at editorial scale — optimising thousands of existing pages while also guiding new content to rank competitively in a highly contested search landscape.</p>
+              </div>
+            </div>
+            <img src="whichcar_cover.jpg" alt="WhichCar" style="width:100%;border-radius:12px;object-fit:cover;aspect-ratio:4/3;">
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Need</div>
+          <h3 class="cs-section-title">What WhichCar Needed</h3>
+          <div class="cs-section-body"><p>WhichCar wanted to drive organic traffic to their site and rely less on ad-clicking. The need was simple and direct — build a knowledge base, define a roadmap, and execute on a 20% organic traffic growth target within three months.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Provide initial SEO education so the team could understand the organic opportunity available to them</span></li>
+            <li><div class="cs-num">2</div><span>Increase organic traffic by 20% within three months — targeting both new and returning visitors</span></li>
+            <li><div class="cs-num">3</div><span>Improve the SEO knowledge of the WhichCar editorial team to create a longer-term internal SEO capability</span></li>
+          </ul>
+          <div class="cs-quote" style="margin-top:28px;">
+            <div class="cs-quote-text">"WhichCar had the content and authority — they just needed a system to make sure every page was pulling its full organic weight."</div>
+            <div class="cs-quote-attr">— Aadesh Dhital, SEO Specialist</div>
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Plan</div>
+          <h3 class="cs-section-title">The SEO Game Plan</h3>
+          <div class="cs-section-body"><p>The strategy focused on rapid on-page wins across WhichCar's highest-traffic content categories, while building sustainable keyword growth by targeting under-served search opportunities in car comparisons and buyer guides.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Educate the team on SEO tools and how to apply keyword insight to editorial decisions</span></li>
+            <li><div class="cs-num">2</div><span>Target both broader keyword sets and high-intent commercial car research terms to grow organic traffic</span></li>
+            <li><div class="cs-num">3</div><span>Build long-term internal SEO capability so the team could sustain results after the campaign</span></li>
+            <li><div class="cs-num">4</div><span>Optimise Google My Business listings and review management to improve local search visibility</span></li>
+            <li><div class="cs-num">5</div><span>Focus on getting high-value review and guide pages to rank for the right searches at the right time</span></li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Execution</div>
+          <h3 class="cs-section-title">How the Strategy Was Delivered</h3>
+          <div class="cs-exec-subhead">SEO Education & Team Upskilling</div>
+          <div class="cs-section-body"><p>The first phase involved educating WhichCar's editorial and digital teams on SEO fundamentals — how Google evaluates content, how to interpret Search Console data, and how to apply keyword insight to article planning. This internal capability building was essential to sustain results beyond the campaign.</p></div>
+          <div class="cs-exec-subhead">On-Page Optimisation at Editorial Scale</div>
+          <div class="cs-section-body"><p>I worked through WhichCar's highest-traffic car review, comparison, and buyer guide pages — rewriting title tags and meta descriptions to match search intent, restructuring headings to reflect how users actually search, and identifying quick-win page-2 pages that needed small improvements to break into page 1.</p></div>
+          <div class="cs-exec-subhead">Keyword Expansion Strategy</div>
+          <div class="cs-section-body"><p>A keyword gap analysis identified significant opportunities in car comparison and "best of" category content. These were mapped to existing articles and new content briefs, expanding the total keyword footprint significantly within 3 months.</p></div>
+          <div class="cs-exec-subhead">Google My Business & Local Optimisation</div>
+          <div class="cs-section-body"><p>GBP profiles were audited and optimised with updated business information, rich content, and structured review management — improving local search visibility across Australia's major cities.</p></div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Results</div>
+          <h3 class="cs-section-title">Shifting into a Higher Gear</h3>
+          <div class="cs-section-body"><p>The WhichCar SEO campaign exceeded the 20% organic traffic growth target with 24.7% growth. Keyword rankings grew across the board, and the results set the brand up for compounding organic growth over the long term.</p></div>
+          <div class="cs-results-strip" style="margin-top:24px;">
+            <div class="cs-results-strip-title">By the Numbers</div>
+            <div class="cs-results-grid">
+              <div class="cs-result-cell"><div class="cs-result-num positive">24.7%</div><div class="cs-result-label">Organic traffic growth — exceeded 20% target</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">19.6%</div><div class="cs-result-label">Increase in total keyword base</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">Top 3</div><div class="cs-result-label">Rankings for high-intent car research terms</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+32%</div><div class="cs-result-label">Click-through rate improvement</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num highlight">3 mo</div><div class="cs-result-label">Time to exceed traffic growth target</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+41%</div><div class="cs-result-label">Page-2-to-page-1 keyword migrations</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- end case study 3 -->
+
+  <div class="cs-divider"></div>
+
+  <!-- ════════════════════════════════════
+       CASE STUDY 4 — WATERSTONE PALLETS
+       ════════════════════════════════════ -->
+  <div class="case-study" id="cs-waterstone">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <div class="cs-breadcrumb">Case Studies <span>/</span> Waterstone Pallets</div>
+        <h2 class="cs-hero-title">How Local SEO Put Waterstone Pallets Top of the Stack in Melbourne</h2>
+        <p class="cs-hero-intro">Waterstone Pallets is a leading manufacturer and supplier of wooden pallets in Melbourne, serving businesses across logistics, warehousing, and export industries. Despite a strong product range and established operations, they were invisible in local search — losing leads to less established competitors who ranked higher in Google.</p>
+        <img src="waterstone_cover.png" alt="Waterstone Pallets" class="cs-hero-cover">
+      </div>
+      <div class="cs-hero-stats">
+        <div class="cs-stat-pill"><div class="cs-stat-pill-num">+112%</div><div class="cs-stat-pill-label">Organic traffic growth</div></div>
+        <div class="cs-stat-pill"><div class="cs-stat-pill-num">Top 3</div><div class="cs-stat-pill-label">Rankings for pallet supplier Melbourne</div></div>
+        <div class="cs-stat-pill"><div class="cs-stat-pill-num">+74%</div><div class="cs-stat-pill-label">Increase in quote form submissions</div></div>
+      </div>
+    </div>
+    <div class="cs-body" style="padding-top:0;">
+      <div class="cs-summary-card">
+        <div class="cs-card-header">
+          <div class="cs-card-top">
+            <img src="waterstone_logo.jpg" alt="Waterstone Pallets Logo" class="cs-card-icon-img">
+            <div>
+              <div class="cs-card-name">Waterstone Pallets</div>
+              <div class="cs-card-meta">Melbourne, Australia <span class="cs-card-meta-dot">·</span> Local SEO &amp; Lead Generation</div>
+            </div>
+          </div>
+          <div class="cs-pill-row">
+            <span class="cs-pill cs-pill-primary">Local SEO</span>
+            <span class="cs-pill cs-pill-neutral">On-Page SEO</span>
+            <span class="cs-pill cs-pill-neutral">Lead Generation</span>
+          </div>
+        </div>
+        <div class="cs-cao">
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">▲</span> Challenge</div>
+            <div class="cs-cao-body">Waterstone Pallets had strong manufacturing capabilities and a broad product range but ranked poorly for local search terms like "pallet suppliers Melbourne" and "wooden pallets Melbourne" — allowing smaller competitors to capture their target leads online.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">⚙</span> Approach</div>
+            <div class="cs-cao-body">Executed a local SEO strategy covering on-page optimisation across all product and location pages, Google Business Profile management, keyword targeting for suburb-level industrial areas (Dandenong, Truganina, Braeside), and technical SEO improvements to support crawlability and indexing.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">↗</span> Outcome</div>
+            <div class="cs-cao-body">Organic traffic more than doubled, with Top 3 rankings achieved for core commercial pallet terms in Melbourne. Quote form submissions increased by 74%, directly converting search visibility into qualified business leads across multiple product categories.</div>
+          </div>
+        </div>
+        <div class="cs-metrics-strip" style="grid-template-columns:repeat(5,1fr);">
+          <div class="cs-metric-cell"><div class="cs-metric-val">+112% <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Organic Traffic</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">Top 3</div><div class="cs-metric-lbl">Melbourne Rankings</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">+74% <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Quote Submissions</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">+6 <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Location Pages Ranked</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">-38% <span class="cs-arr-down">↓</span></div><div class="cs-metric-lbl">Bounce Rate</div></div>
+        </div>
+      </div>
+      <div class="cs-read-wrap">
+        <button class="cs-read-btn" onclick="toggleCS('waterstone')">Read Case Study <span class="cs-read-arrow" id="waterstone-arrow">↓</span></button>
+      </div>
+      <div class="cs-details" id="waterstone-details">
+        <div class="cs-section">
+          <div class="cs-section-label">About</div>
+          <div class="cs-about-grid">
+            <div>
+              <h3 class="cs-section-title">About Waterstone Pallets</h3>
+              <div class="cs-section-body">
+                <p>Waterstone Pallets is a Melbourne-based manufacturer and supplier of high-quality wooden pallets — including timber, standard, euro, export, racking, and custom pallets. They serve businesses across logistics, warehousing, manufacturing, and export industries throughout Victoria.</p>
+                <p>With a comprehensive product range and multiple Melbourne service areas including Dandenong, Truganina, Braeside, Hallam, and Cranbourne, Waterstone had all the right commercial credentials — but their digital presence was not reflecting their real-world market position.</p>
+              </div>
+            </div>
+            <img src="waterstone_cover.png" alt="Waterstone Pallets" style="width:100%;border-radius:12px;object-fit:cover;aspect-ratio:4/3;">
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Need</div>
+          <h3 class="cs-section-title">The Problem with Invisible Inventory</h3>
+          <div class="cs-section-body"><p>Businesses searching for pallet suppliers in Melbourne were not finding Waterstone despite the company's strong product offering and geographic coverage. The site lacked the on-page structure and local signals needed to rank for high-intent commercial search queries.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Rank for high-intent local search terms like "pallet suppliers Melbourne", "wooden pallets Melbourne", and product-specific queries across each pallet type</span></li>
+            <li><div class="cs-num">2</div><span>Build individual location pages for each service area — Dandenong, Truganina, Cranbourne, Braeside, Hallam — to capture suburb-level search traffic</span></li>
+            <li><div class="cs-num">3</div><span>Improve the quality and structure of product pages to better communicate relevance to both users and search engines</span></li>
+            <li><div class="cs-num">4</div><span>Convert improved visibility into measurable business outcomes — specifically quote form submissions and phone enquiries</span></li>
+          </ul>
+          <div class="cs-quote" style="margin-top:28px;">
+            <div class="cs-quote-text">"In a business-to-business category, the buyer who can't find you online simply calls your competitor. The SEO goal was simple — make sure Waterstone was always findable first."</div>
+            <div class="cs-quote-attr">— Aadesh Dhital, SEO Specialist</div>
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Plan</div>
+          <h3 class="cs-section-title">Local SEO & Lead Generation Strategy</h3>
+          <div class="cs-section-body"><p>The strategy focused on two parallel tracks: improving the technical and on-page signals of existing product pages, and building a local SEO footprint through location-specific pages and GBP management across all service areas.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Audit and restructure all product pages — title tags, headings, metadata, internal linking — aligned to commercial search intent for each pallet type</span></li>
+            <li><div class="cs-num">2</div><span>Build and optimise suburb-level location pages for every Melbourne service area Waterstone operates in</span></li>
+            <li><div class="cs-num">3</div><span>Optimise the Google Business Profile with accurate categories, service listings, photos, and regular posts to improve local pack visibility</span></li>
+            <li><div class="cs-num">4</div><span>Implement technical SEO fixes — site speed, mobile optimisation, crawl structure — to improve page-level ranking signals</span></li>
+            <li><div class="cs-num">5</div><span>Improve conversion pathways — clearer CTAs, quote form placement, and content hierarchy — to turn rankings into enquiries</span></li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Execution</div>
+          <h3 class="cs-section-title">Delivery in Detail</h3>
+          <div class="cs-exec-subhead">Product Page Optimisation</div>
+          <div class="cs-section-body"><p>Each product page — timber pallets, standard pallets, euro pallets, export pallets, racking pallets, custom pallets — was restructured with targeted title tags, properly hierarchied headings, keyword-rich body content aligned to buyer intent, and internal links connecting product pages to service area pages.</p></div>
+          <div class="cs-exec-subhead">Location Page Build-Out</div>
+          <div class="cs-section-body"><p>Individual location pages were created for Dandenong, Truganina, Braeside, Hallam, Cranbourne, and Melbourne proper — each uniquely written, targeting suburb-specific search queries and cross-linked to relevant product pages. This structure allowed Waterstone to rank across the full geographic footprint of their service area.</p></div>
+          <div class="cs-exec-subhead">Google Business Profile Management</div>
+          <div class="cs-section-body"><p>The GBP was fully audited and optimised — business categories updated to correctly reflect pallet manufacturing and supply, service listings expanded, photos uploaded across product types, and regular posts used to signal freshness and drive map pack visibility in commercial search results.</p></div>
+          <div class="cs-exec-subhead">Technical SEO & Conversion Improvements</div>
+          <div class="cs-section-body"><p>Technical issues were identified and resolved — including page speed improvements, mobile render optimisation, and crawl structure fixes. Quote form placement and CTA language were also improved to reduce friction at the conversion point, directly contributing to the increase in form submissions.</p></div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Results</div>
+          <h3 class="cs-section-title">Pallets of Progress</h3>
+          <div class="cs-section-body"><p>The local SEO strategy delivered a step-change in online visibility for Waterstone Pallets. Organic traffic more than doubled, and the brand achieved Top 3 rankings for their most commercially valuable search terms — directly translating into a 74% increase in quote form submissions.</p></div>
+          <div class="cs-results-strip" style="margin-top:24px;">
+            <div class="cs-results-strip-title">By the Numbers</div>
+            <div class="cs-results-grid">
+              <div class="cs-result-cell"><div class="cs-result-num positive">+112%</div><div class="cs-result-label">Organic traffic growth</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">Top 3</div><div class="cs-result-label">Rankings for "pallet suppliers Melbourne"</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+74%</div><div class="cs-result-label">Quote form submission increase</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+6</div><div class="cs-result-label">Location pages ranking on page 1</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num highlight">-38%</div><div class="cs-result-label">Bounce rate reduction</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+89%</div><div class="cs-result-label">Google Maps impressions</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end case study 4 -->
+
+  <div class="cs-divider"></div>
+
+  <!-- ════════════════════════════════════
+       CASE STUDY 5 — ODLS
+       ════════════════════════════════════ -->
+  <div class="case-study" id="cs-odls">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <div class="cs-breadcrumb">Case Studies <span>/</span> ODLS</div>
+        <h2 class="cs-hero-title">Heavy Lifting in the SERPs — SEO for ODLS Overdimensional Haulage</h2>
+        <p class="cs-hero-intro">ODLS (Overdimensional Lift & Shift) is one of Australia's most specialised heavy haulage and transport operators, with over 40 years of experience moving oversized loads across Victoria and nationally. In a niche B2B sector with virtually no digital content strategy, the challenge was to build organic search presence from the ground up.</p>
+        <img src="odls_cover.jpg" alt="ODLS" class="cs-hero-cover">
+      </div>
+      <div class="cs-hero-stats">
+        <div class="cs-stat-pill"><div class="cs-stat-pill-num">+186%</div><div class="cs-stat-pill-label">Organic impressions growth</div></div>
+        <div class="cs-stat-pill"><div class="cs-stat-pill-num">Top 5</div><div class="cs-stat-pill-label">Rankings for heavy haulage Victoria</div></div>
+        <div class="cs-stat-pill"><div class="cs-stat-pill-num">+93%</div><div class="cs-stat-pill-label">Increase in organic enquiries</div></div>
+      </div>
+    </div>
+    <div class="cs-body" style="padding-top:0;">
+      <div class="cs-summary-card">
+        <div class="cs-card-header">
+          <div class="cs-card-top">
+            <img src="odls_logo.png" alt="ODLS Logo" class="cs-card-icon-img" style="background:#fff; padding:4px;">
+            <div>
+              <div class="cs-card-name">ODLS</div>
+              <div class="cs-card-meta">Dandenong South, Victoria <span class="cs-card-meta-dot">·</span> B2B SEO &amp; Content Strategy</div>
+            </div>
+          </div>
+          <div class="cs-pill-row">
+            <span class="cs-pill cs-pill-primary">Technical SEO</span>
+            <span class="cs-pill cs-pill-neutral">B2B Content</span>
+            <span class="cs-pill cs-pill-neutral">On-Page SEO</span>
+          </div>
+        </div>
+        <div class="cs-cao">
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">▲</span> Challenge</div>
+            <div class="cs-cao-body">ODLS had 40+ years of industry reputation but almost no organic search presence. The website was technically underperforming, service pages lacked keyword depth, and the brand was invisible for high-value B2B search terms like "heavy haulage Melbourne" and "overdimensional transport Victoria".</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">⚙</span> Approach</div>
+            <div class="cs-cao-body">Rebuilt the SEO architecture across all service pages — heavy haulage, jacking & skating, crane semis, superloads, and mobile cranes. Developed authoritative B2B content targeting project and industry-specific search queries, and resolved technical issues limiting crawl and indexing performance.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">↗</span> Outcome</div>
+            <div class="cs-cao-body">Organic impressions grew by 186% and the business achieved Top 5 rankings for its most commercially valuable search terms. Organic enquiries increased by 93%, bringing ODLS qualified leads directly through search — from project managers, engineers, and procurement teams across Victoria.</div>
+          </div>
+        </div>
+        <div class="cs-metrics-strip" style="grid-template-columns:repeat(5,1fr);">
+          <div class="cs-metric-cell"><div class="cs-metric-val">+186% <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Organic Impressions</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">Top 5</div><div class="cs-metric-lbl">Heavy Haulage VIC</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">+93% <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Organic Enquiries</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">+5 <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Service Pages Ranked</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">-44% <span class="cs-arr-down">↓</span></div><div class="cs-metric-lbl">Crawl Errors</div></div>
+        </div>
+      </div>
+      <div class="cs-read-wrap">
+        <button class="cs-read-btn" onclick="toggleCS('odls')">Read Case Study <span class="cs-read-arrow" id="odls-arrow">↓</span></button>
+      </div>
+      <div class="cs-details" id="odls-details">
+        <div class="cs-section">
+          <div class="cs-section-label">About</div>
+          <div class="cs-about-grid">
+            <div>
+              <h3 class="cs-section-title">About ODLS</h3>
+              <div class="cs-section-body">
+                <p>ODLS (Overdimensional Lift & Shift) is a specialist heavy haulage and transport operator based in Dandenong South, Victoria. With over 40 years of experience across parent companies, ODLS has been involved in every major industrial project in Victoria — moving transformers, superloads, mining equipment, and oversized machinery across Australia.</p>
+                <p>Their fleet includes specialised heavy haul prime movers rated up to 250T, crane semis, telehandlers, and beamset equipment — with 300+ pieces of specialised equipment available and 24/7 availability. Despite this impressive operational capability, their online presence did not reflect their market authority.</p>
+              </div>
+            </div>
+            <img src="odls_cover.jpg" alt="ODLS" style="width:100%;border-radius:12px;object-fit:cover;aspect-ratio:4/3;">
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Need</div>
+          <h3 class="cs-section-title">A Giant in the Industry, Invisible Online</h3>
+          <div class="cs-section-body"><p>ODLS was winning major projects through reputation and referrals, but had no organic search channel. In a high-value B2B sector where project managers and engineers actively search for specialised transport solutions, being invisible online meant missing a significant volume of qualified inbound enquiries.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Rank for high-value B2B search terms across every service line — heavy haulage, superloads, mobile cranes, jacking & skating, transformer transport</span></li>
+            <li><div class="cs-num">2</div><span>Develop authoritative service page content that communicated technical expertise to both search engines and sophisticated B2B buyers</span></li>
+            <li><div class="cs-num">3</div><span>Resolve technical SEO issues that were limiting page crawlability and preventing key service pages from indexing correctly</span></li>
+            <li><div class="cs-num">4</div><span>Convert improved visibility into a measurable increase in organic enquiries from qualified project-level buyers</span></li>
+          </ul>
+          <div class="cs-quote" style="margin-top:28px;">
+            <div class="cs-quote-text">"ODLS had moved some of the biggest loads in Victoria's industrial history. The SEO strategy just needed to make sure Google knew that too."</div>
+            <div class="cs-quote-attr">— Aadesh Dhital, SEO Specialist</div>
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Plan</div>
+          <h3 class="cs-section-title">B2B SEO Strategy for a Specialist Industry</h3>
+          <div class="cs-section-body"><p>The strategy required a deep understanding of the heavy haulage industry — how buyers search, what terminology they use, and what level of technical credibility content needed to convey. Generic SEO approaches wouldn't work here; the content needed to earn trust from engineers and procurement managers.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Conduct keyword research specific to the overdimensional and heavy haulage sector — capturing both broad and highly technical search queries</span></li>
+            <li><div class="cs-num">2</div><span>Rewrite and expand all service pages — heavy haulage, jacking & skating, superload beam sets, crane semis, mobile cranes — with authoritative, technically accurate content</span></li>
+            <li><div class="cs-num">3</div><span>Implement technical SEO fixes: crawl error resolution, site structure improvements, internal linking between service and industry pages</span></li>
+            <li><div class="cs-num">4</div><span>Develop industry-specific content targeting construction, logistics, and transport sectors to attract project-level search traffic</span></li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Execution</div>
+          <h3 class="cs-section-title">Technical SEO Meets Technical Industry</h3>
+          <div class="cs-exec-subhead">Service Page Rebuild</div>
+          <div class="cs-section-body"><p>Every service page was rewritten from scratch — with keyword-targeted headings, technically accurate service descriptions, equipment specifications, and clear CTAs for project enquiries. Content was structured to serve both a sophisticated B2B reader and Google's relevance signals simultaneously.</p></div>
+          <div class="cs-exec-subhead">Industry Page Development</div>
+          <div class="cs-section-body"><p>New industry-targeting pages were developed for Construction, Logistics, and Transport — each addressing the specific heavy haulage needs of that sector and linking to relevant service pages. This cluster structure improved topical authority and opened up additional keyword ranking opportunities.</p></div>
+          <div class="cs-exec-subhead">Technical SEO Audit & Fix</div>
+          <div class="cs-section-body"><p>A full technical audit identified crawl errors, broken internal links, and missing metadata across key service pages. All issues were resolved in a structured sprint, with XML sitemaps updated, canonical tags implemented, and page speed improvements applied to support mobile ranking signals.</p></div>
+          <div class="cs-exec-subhead">Internal Linking Architecture</div>
+          <div class="cs-section-body"><p>An internal linking matrix was built connecting service pages, industry pages, project case studies, and the equipment page — distributing authority across the full site and ensuring Google's crawlers could efficiently discover and index all high-value content.</p></div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Results</div>
+          <h3 class="cs-section-title">Heavy Results for a Heavy Haulage Leader</h3>
+          <div class="cs-section-body"><p>The B2B SEO strategy delivered a transformational uplift in ODLS's organic search presence. From near-invisible, the business achieved Top 5 rankings for its most commercially valuable terms — and most importantly, organic enquiries from qualified project-level buyers nearly doubled.</p></div>
+          <div class="cs-results-strip" style="margin-top:24px;">
+            <div class="cs-results-strip-title">By the Numbers</div>
+            <div class="cs-results-grid">
+              <div class="cs-result-cell"><div class="cs-result-num positive">+186%</div><div class="cs-result-label">Growth in organic search impressions</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">Top 5</div><div class="cs-result-label">Rankings for heavy haulage Victoria</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+93%</div><div class="cs-result-label">Increase in organic enquiries</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+5</div><div class="cs-result-label">Service pages ranking on page 1</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num highlight">-44%</div><div class="cs-result-label">Reduction in crawl errors</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+67%</div><div class="cs-result-label">Organic click-through rate improvement</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end case study 5 -->
+
+  <div class="cs-divider"></div>
+
+  <!-- ════════════════════════════════════
+       CASE STUDY 6 — ASPECT UNDERWRITING
+       ════════════════════════════════════ -->
+  <div class="case-study" id="cs-aspect">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <div class="cs-breadcrumb">Case Studies <span>/</span> Aspect Underwriting</div>
+        <h2 class="cs-hero-title">SEO for a Specialist Insurance Underwriting Agency — Growing in a Trust-Driven Market</h2>
+        <p class="cs-hero-intro">Aspect Underwriting is a Melbourne-based insurance underwriting agency specialising in Accident & Health insurance products — including Income Protection, TPD, Trauma, and Accidental Death. In a regulated, trust-sensitive financial services category, the SEO challenge was building organic visibility for highly specific product and service queries without compromising the brand's professional positioning.</p>
+        <img src="aspect_cover.jpg" alt="Aspect Underwriting" class="cs-hero-cover">
+      </div>
+      <div class="cs-hero-stats">
+        <div class="cs-stat-pill"><div class="cs-stat-pill-num">+147%</div><div class="cs-stat-pill-label">Organic traffic increase</div></div>
+        <div class="cs-stat-pill"><div class="cs-stat-pill-num">Top 5</div><div class="cs-stat-pill-label">Rankings for A&H insurance terms</div></div>
+        <div class="cs-stat-pill"><div class="cs-stat-pill-num">+62%</div><div class="cs-stat-pill-label">Increase in quote requests</div></div>
+      </div>
+    </div>
+    <div class="cs-body" style="padding-top:0;">
+      <div class="cs-summary-card">
+        <div class="cs-card-header">
+          <div class="cs-card-top">
+            <img src="aspect_logo.png" alt="Aspect Underwriting Logo" class="cs-card-icon-img">
+            <div>
+              <div class="cs-card-name">Aspect Underwriting</div>
+              <div class="cs-card-meta">Collingwood, Melbourne <span class="cs-card-meta-dot">·</span> Financial Services SEO</div>
+            </div>
+          </div>
+          <div class="cs-pill-row">
+            <span class="cs-pill cs-pill-primary">On-Page SEO</span>
+            <span class="cs-pill cs-pill-neutral">Content Strategy</span>
+            <span class="cs-pill cs-pill-neutral">Financial Services</span>
+          </div>
+        </div>
+        <div class="cs-cao">
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">▲</span> Challenge</div>
+            <div class="cs-cao-body">Aspect Underwriting operated in a highly competitive and regulated financial services category. Their specialist products — income protection, TPD, trauma, and accidental death insurance — were underperforming in organic search, with product pages lacking the keyword depth and E-E-A-T signals needed to rank against larger insurers.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">⚙</span> Approach</div>
+            <div class="cs-cao-body">Implemented a content-led SEO strategy focused on building E-E-A-T signals across all product pages — structuring content to demonstrate expertise, authority, and trustworthiness. Developed a content hub targeting educational insurance queries, and optimised all product and service pages for intent-specific keywords aligned to the buyer journey.</div>
+          </div>
+          <div class="cs-cao-col">
+            <div class="cs-cao-label"><span class="cs-cao-icon">↗</span> Outcome</div>
+            <div class="cs-cao-body">Organic traffic grew by 147%, with Top 5 rankings achieved for core Accident & Health insurance product terms in Melbourne. The content hub drove significant educational traffic that converted to quote requests — with a 62% increase in online quote submissions as a direct result of the SEO strategy.</div>
+          </div>
+        </div>
+        <div class="cs-metrics-strip" style="grid-template-columns:repeat(5,1fr);">
+          <div class="cs-metric-cell"><div class="cs-metric-val">+147% <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Organic Traffic</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">Top 5</div><div class="cs-metric-lbl">A&H Insurance Rankings</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">+62% <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Quote Requests</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">+88% <span class="cs-arr-up">↑</span></div><div class="cs-metric-lbl">Content Hub Traffic</div></div>
+          <div class="cs-metric-cell"><div class="cs-metric-val">-33% <span class="cs-arr-down">↓</span></div><div class="cs-metric-lbl">Bounce Rate</div></div>
+        </div>
+      </div>
+      <div class="cs-read-wrap">
+        <button class="cs-read-btn" onclick="toggleCS('aspect')">Read Case Study <span class="cs-read-arrow" id="aspect-arrow">↓</span></button>
+      </div>
+      <div class="cs-details" id="aspect-details">
+        <div class="cs-section">
+          <div class="cs-section-label">About</div>
+          <div class="cs-about-grid">
+            <div>
+              <h3 class="cs-section-title">About Aspect Underwriting</h3>
+              <div class="cs-section-body">
+                <p>Aspect Underwriting is a specialist insurance underwriting agency based in Collingwood, Melbourne — providing Accident & Health insurance products including Income Protection, Total & Permanent Disability (TPD), Trauma, and Accidental Death cover. They also offer wholesale insurance consulting and London market placement services.</p>
+                <p>As part of the McLardy McShane Partners group and affiliated with the Steadfast Group and Lloyd's, Aspect Underwriting operates at the intersection of specialist insurance expertise and personalised client service. Their challenge was translating this professional credibility into organic search visibility in a highly competitive financial services category.</p>
+              </div>
+            </div>
+            <img src="aspect_cover.jpg" alt="Aspect Underwriting" style="width:100%;border-radius:12px;object-fit:cover;aspect-ratio:4/3;">
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Need</div>
+          <h3 class="cs-section-title">Competing with Giants in a Trust-First Category</h3>
+          <div class="cs-section-body"><p>In the insurance sector, Google applies the highest level of E-E-A-T scrutiny — content must demonstrate real expertise, institutional authority, and trustworthiness to rank. Aspect's product pages were not yet structured to meet these standards, limiting their organic visibility against larger, more resourced insurers.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Improve organic rankings for product-specific terms — income protection insurance Melbourne, TPD insurance quote, trauma insurance underwriting — without compromising compliance or brand positioning</span></li>
+            <li><div class="cs-num">2</div><span>Build E-E-A-T signals across all product and service pages to satisfy Google's elevated quality standards for financial services content</span></li>
+            <li><div class="cs-num">3</div><span>Develop a content hub targeting educational insurance queries that could capture top-of-funnel traffic and build topical authority</span></li>
+            <li><div class="cs-num">4</div><span>Convert improved organic visibility into measurable quote requests and client enquiries</span></li>
+          </ul>
+          <div class="cs-quote" style="margin-top:28px;">
+            <div class="cs-quote-text">"In financial services, Google doesn't just reward relevance — it rewards trust. The SEO strategy had to build both simultaneously."</div>
+            <div class="cs-quote-attr">— Aadesh Dhital, SEO Specialist</div>
+          </div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Plan</div>
+          <h3 class="cs-section-title">E-E-A-T Led SEO for Financial Services</h3>
+          <div class="cs-section-body"><p>The strategy centred on aligning Aspect's content with Google's E-E-A-T framework (Experience, Expertise, Authoritativeness, Trustworthiness) — the standard applied to all YMYL (Your Money or Your Life) content in financial services categories.</p></div>
+          <ul class="cs-num-list" style="margin-top:20px;">
+            <li><div class="cs-num">1</div><span>Restructure all product pages — Income Protection, TPD, Trauma, Accidental Death — with intent-matched headings, FAQs, and authoritative content demonstrating genuine underwriting expertise</span></li>
+            <li><div class="cs-num">2</div><span>Build author credibility signals — team page optimisation, professional credentials, and content attribution — to strengthen E-E-A-T signals at page level</span></li>
+            <li><div class="cs-num">3</div><span>Develop a Content Hub (Insights) targeting educational queries around insurance types, claims processes, and A&H product comparisons</span></li>
+            <li><div class="cs-num">4</div><span>Improve on-page technical signals — schema markup (Insurance Product, FAQPage, Organization), metadata, and internal linking — across all key pages</span></li>
+          </ul>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Execution</div>
+          <h3 class="cs-section-title">Building Trust at Every Layer</h3>
+          <div class="cs-exec-subhead">Product Page Restructure</div>
+          <div class="cs-section-body"><p>Each product page was rewritten to lead with clear, jargon-appropriate explanations of the insurance product, followed by eligibility criteria, claims process overviews, and FAQ sections targeting common search queries. Keyword targeting was aligned to how real buyers search — "income protection insurance quote", "TPD insurance Melbourne", "trauma cover Australia" — without sacrificing the professional tone the brand required.</p></div>
+          <div class="cs-exec-subhead">Content Hub Development</div>
+          <div class="cs-section-body"><p>A structured Content Hub (Insights section) was developed with articles targeting awareness and consideration-stage queries — "what is income protection insurance", "difference between TPD and income protection", "how to claim trauma insurance in Australia". These articles built topical authority signals and drew top-of-funnel traffic that could be converted via internal links to product pages and the quick quote tool.</p></div>
+          <div class="cs-exec-subhead">Schema Markup & Technical SEO</div>
+          <div class="cs-section-body"><p>Insurance Product schema, FAQPage schema, and Organization schema were implemented across the site — providing structured data signals that help Google understand the nature and credibility of the content. Metadata was rewritten across all pages with clear, intent-matched title tags and meta descriptions to improve click-through rate from SERP.</p></div>
+          <div class="cs-exec-subhead">E-E-A-T Signal Building</div>
+          <div class="cs-section-body"><p>The team page was restructured to highlight professional credentials, industry affiliations (McLardy McShane Partners, Steadfast Group, Lloyd's), and years of experience. Author attribution was added to content hub articles, and key pages were updated to include trust signals — regulatory references, privacy policies, and hardship/support policy links — that reinforce legitimacy in Google's quality assessment.</p></div>
+        </div>
+        <div class="cs-section">
+          <div class="cs-section-label">The Results</div>
+          <h3 class="cs-section-title">Underwriting Better Organic Performance</h3>
+          <div class="cs-section-body"><p>The E-E-A-T-led SEO strategy delivered a 147% increase in organic traffic for Aspect Underwriting. Top 5 rankings were achieved for core A&H insurance product terms, and the Content Hub drove significant educational traffic that converted through to quote requests — with a 62% increase in online quote submissions directly attributed to organic search growth.</p></div>
+          <div class="cs-results-strip" style="margin-top:24px;">
+            <div class="cs-results-strip-title">By the Numbers</div>
+            <div class="cs-results-grid">
+              <div class="cs-result-cell"><div class="cs-result-num positive">+147%</div><div class="cs-result-label">Organic traffic growth</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">Top 5</div><div class="cs-result-label">Rankings for A&H insurance terms Melbourne</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+62%</div><div class="cs-result-label">Online quote request increase</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+88%</div><div class="cs-result-label">Content hub organic traffic</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num highlight">-33%</div><div class="cs-result-label">Bounce rate reduction on product pages</div></div>
+              <div class="cs-result-cell"><div class="cs-result-num positive">+54%</div><div class="cs-result-label">Average session duration improvement</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end case study 6 -->
+
+</div><!-- end #results -->
+
+<!-- REFERENCES -->
+<section class="section">
+  <div class="wrap">
+    <p class="sec-eyebrow">References</p>
+    <h2 class="sec-title">Professional References</h2>
+    <p class="sec-sub">Available for direct contact upon request.</p>
+    <div class="refs-grid reveal">
+      <div class="ref-card">
+        <div class="ref-photo-wrap">
+          <img src="tyson_young.jpg" alt="Tyson Young" class="ref-photo">
+        </div>
+        <div class="ref-info">
+          <div class="ref-name">Tyson Young</div>
+          <div class="ref-role">Founder / Managing Director — Anxious To Matter</div>
+          <div class="ref-contact">📞 0433 201 939</div>
+        </div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-photo-wrap">
+          <img src="prakash_humagain.jpg" alt="Prakash Humagain" class="ref-photo">
+        </div>
+        <div class="ref-info">
+          <div class="ref-name">Prakash Humagain</div>
+          <div class="ref-role">SEO Expert — Sydney</div>
+          <div class="ref-contact">📞 0427 143 612 (WhatsApp only)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-name">Aadesh Dhital</div>
+    <div class="foot-links">
+      <a href="mailto:digitalaadesh@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/aadesh-dhital-45a9a27a/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/digital.aadesh/" target="_blank">Instagram</a>
+    </div>
+    <div class="foot-copy">Perth, Australia · 2025</div>
+  </div>
+</footer>
+
+<script>
+/* ══════════════════════════════════════════════════════
+   BACKGROUND CANVAS — techy, perfected, throttled 20fps
+   ══════════════════════════════════════════════════════ */
+(function () {
+  const canvas = document.getElementById('bg-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+
+  const PINK  = '#FF33AA';
+  const BLUE  = '#4A6FA5';
+  const GREY  = '#B0B7C3';
+  const W = () => canvas.width;
+  const H = () => canvas.height;
+
+  /* Grid */
+  function drawGrid() {
+    const sz = 54;
+    ctx.strokeStyle = 'rgba(255,51,170,0.04)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    for (let x = 0; x < W() + sz; x += sz) { ctx.moveTo(x,0); ctx.lineTo(x,H()); }
+    for (let y = 0; y < H() + sz; y += sz) { ctx.moveTo(0,y); ctx.lineTo(W(),y); }
+    ctx.stroke();
+  }
+
+  /* HUD corners */
+  function drawCorners(t) {
+    const sz = 28, pad = 18;
+    const corners = [
+      [pad, pad, 1, 1], [W()-pad, pad, -1, 1],
+      [pad, H()-pad, 1, -1], [W()-pad, H()-pad, -1, -1]
+    ];
+    ctx.lineWidth = 2;
+    corners.forEach(([x,y,dx,dy],i) => {
+      const a = 0.2 + 0.18 * Math.sin(t * 0.04 + i * 1.2);
+      ctx.strokeStyle = `rgba(255,51,170,${a})`;
+      ctx.beginPath();
+      ctx.moveTo(x+dx*sz, y); ctx.lineTo(x,y); ctx.lineTo(x, y+dy*sz);
+      ctx.stroke();
+    });
+  }
+
+  /* Scan line */
+  let scanY = -2;
+  function drawScan() {
+    scanY += 1.4;
+    if (scanY > H() + 4) scanY = -2;
+    const prog = scanY / H();
+    const a = prog < 0.05 ? prog/0.05 : prog > 0.92 ? (1-prog)/0.08 : 1;
+    const g = ctx.createLinearGradient(0,0,W(),0);
+    g.addColorStop(0,   'transparent');
+    g.addColorStop(0.2, `rgba(255,51,170,${0.18*a})`);
+    g.addColorStop(0.5, `rgba(255,51,170,${0.45*a})`);
+    g.addColorStop(0.8, `rgba(255,51,170,${0.18*a})`);
+    g.addColorStop(1,   'transparent');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, scanY, W(), 2);
+  }
+
+  /* Glowing orbs */
+  const orbs = [
+    { rx:0.10, ry:0.12, r:160, col:'rgba(255,51,170,', a:0.06,  sp:0.0007, ph:0   },
+    { rx:0.90, ry:0.35, r:130, col:'rgba(74,111,165,',  a:0.07,  sp:0.0009, ph:2.1 },
+    { rx:0.06, ry:0.75, r:100, col:'rgba(176,183,195,', a:0.045, sp:0.0006, ph:4.2 },
+    { rx:0.92, ry:0.78, r: 90, col:'rgba(255,51,170,',  a:0.04,  sp:0.0011, ph:1.5 },
+  ];
+  function drawOrbs(t) {
+    orbs.forEach(o => {
+      const ox = o.rx*W() + 30*Math.sin(t*o.sp*60+o.ph);
+      const oy = o.ry*H() + 22*Math.cos(t*o.sp*60*0.7+o.ph);
+      const a  = o.a + 0.02*Math.sin(t*o.sp*60+o.ph);
+      const g  = ctx.createRadialGradient(ox,oy,0,ox,oy,o.r);
+      g.addColorStop(0,   o.col+a+')');
+      g.addColorStop(0.6, o.col+(a*0.3)+')');
+      g.addColorStop(1,   'transparent');
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(ox,oy,o.r,0,Math.PI*2); ctx.fill();
+    });
+  }
+
+  /* Particles */
+  const PCOLS = [PINK,BLUE,GREY,PINK,PINK,BLUE];
+  const particles = Array.from({length:24},(_,i)=>({
+    x: Math.random()*window.innerWidth,
+    y: Math.random()*window.innerHeight,
+    size: 1.5+Math.random()*3,
+    spd: 0.35+Math.random()*0.55,
+    col: PCOLS[i%PCOLS.length],
+    sq: i%5===0,
+    alpha: 0.15+Math.random()*0.3,
+  }));
+  function drawParticles() {
+    particles.forEach(p => {
+      p.y -= p.spd;
+      if (p.y < -10) { p.y=H()+10; p.x=Math.random()*W(); }
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle = p.col;
+      if (p.sq) { ctx.fillRect(p.x-p.size/2, p.y-p.size/2, p.size, p.size); }
+      else { ctx.beginPath(); ctx.arc(p.x,p.y,p.size,0,Math.PI*2); ctx.fill(); }
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  /* Techy arrows */
+  const SYMS = ['→','⟶','▶','>>','›','⇒','►','➜'];
+  const arrows = Array.from({length:12},(_,i)=>({
+    x: Math.random()*window.innerWidth,
+    y: 60+Math.random()*(window.innerHeight-120),
+    spd: 0.4+Math.random()*0.7,
+    sym: SYMS[i%SYMS.length],
+    col: i%3===0?PINK:i%3===1?BLUE:GREY,
+    sz:  10+Math.floor(Math.random()*10),
+    alpha: 0.12+Math.random()*0.18,
+    dir: i%4===0?-1:1,
+  }));
+  function drawArrows() {
+    ctx.textBaseline = 'middle';
+    arrows.forEach(a => {
+      a.x += a.spd*a.dir;
+      if (a.dir>0 && a.x>W()+30) a.x=-30;
+      if (a.dir<0 && a.x<-30)    a.x=W()+30;
+      ctx.globalAlpha = a.alpha;
+      ctx.fillStyle   = a.col;
+      ctx.font        = `700 ${a.sz}px monospace`;
+      ctx.fillText(a.sym, a.x, a.y);
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  /* Data labels */
+  const DLABELS = [
+    {text:'CTR +4.8%',     col:PINK, bd:'rgba(255,51,170,0.3)', bg:'rgba(255,51,170,0.07)'},
+    {text:'DA +12',        col:BLUE, bd:'rgba(74,111,165,0.3)',  bg:'rgba(74,111,165,0.07)' },
+    {text:'Rank #1 ↑',    col:PINK, bd:'rgba(255,51,170,0.3)', bg:'rgba(255,51,170,0.07)'},
+    {text:'SEO +68%',      col:GREY, bd:'rgba(176,183,195,0.3)',bg:'rgba(176,183,195,0.06)'},
+    {text:'142K Impr.',    col:BLUE, bd:'rgba(74,111,165,0.3)',  bg:'rgba(74,111,165,0.07)' },
+    {text:'Backlinks ×10', col:PINK, bd:'rgba(255,51,170,0.3)', bg:'rgba(255,51,170,0.07)'},
+    {text:'Organic ↑73%', col:GREY, bd:'rgba(176,183,195,0.3)',bg:'rgba(176,183,195,0.06)'},
+    {text:'CPC ↓ 22%',    col:BLUE, bd:'rgba(74,111,165,0.3)',  bg:'rgba(74,111,165,0.07)' },
+  ];
+  let labelsInited = false;
+  let floatLabels = [];
+  function initLabels() {
+    floatLabels = DLABELS.map((lb,i) => {
+      const side = i%2===0;
+      return {...lb, x: side ? 14 : W()-155, y: 80+i*(H()*0.11), spd:0.22+Math.random()*0.18, alpha:0};
+    });
+    labelsInited = true;
+  }
+  function drawLabels() {
+    if (!labelsInited) initLabels();
+    ctx.font = '600 9px "DM Sans",sans-serif';
+    ctx.textBaseline = 'middle';
+    floatLabels.forEach(lb => {
+      lb.y -= lb.spd;
+      if (lb.alpha < 0.9) lb.alpha = Math.min(lb.alpha+0.006, 0.9);
+      if (lb.y < -30) { lb.y=H()+30; lb.alpha=0; }
+      const w = ctx.measureText(lb.text).width+16;
+      ctx.globalAlpha = lb.alpha*0.9;
+      ctx.fillStyle   = lb.bg;
+      ctx.beginPath(); ctx.roundRect(lb.x, lb.y-11, w, 22, 4); ctx.fill();
+      ctx.strokeStyle = lb.bd; ctx.lineWidth=1; ctx.stroke();
+      ctx.fillStyle   = lb.col;
+      ctx.fillText(lb.text, lb.x+8, lb.y);
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  /* Bar chart — top right */
+  const BH=[28,44,20,52,36,60], BC=[PINK,BLUE,GREY,PINK,BLUE,PINK];
+  function drawBars(t) {
+    const cx=W()-114, cy=90, bw=8, gap=5, baseH=64;
+    const pw=BH.length*(bw+gap)+16;
+    ctx.globalAlpha=0.75;
+    ctx.fillStyle='rgba(26,42,70,0.65)'; ctx.strokeStyle='rgba(255,51,170,0.15)'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.roundRect(cx-8,cy-8,pw,baseH+22,6); ctx.fill(); ctx.stroke();
+    ctx.globalAlpha=0.45; ctx.fillStyle=GREY; ctx.font='600 8px monospace'; ctx.textBaseline='alphabetic';
+    ctx.fillText('TRAFFIC', cx,cy+baseH+16);
+    BH.forEach((bh,i) => {
+      const h=bh*(0.72+0.28*Math.sin(t*0.03+i*0.9));
+      ctx.globalAlpha=0.82; ctx.fillStyle=BC[i];
+      ctx.beginPath(); ctx.roundRect(cx+i*(bw+gap),cy+baseH-h,bw,h,2); ctx.fill();
+    });
+    ctx.globalAlpha=1;
+  }
+
+  /* Trend chart — bottom left */
+  const TP=[[0,0.88],[0.18,0.67],[0.36,0.72],[0.54,0.42],[0.73,0.28],[1,0.08]];
+  const DC=[PINK,BLUE,PINK,BLUE,PINK,PINK];
+  let tDraw=0;
+  function drawTrend(t) {
+    const tx=16, ty=H()-118, tw=128, th=68;
+    ctx.globalAlpha=0.75;
+    ctx.fillStyle='rgba(26,42,70,0.65)'; ctx.strokeStyle='rgba(74,111,165,0.2)'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.roundRect(tx,ty,tw+20,th+24,6); ctx.fill(); ctx.stroke();
+    ctx.globalAlpha=0.45; ctx.fillStyle=GREY; ctx.font='600 8px monospace'; ctx.textBaseline='alphabetic';
+    ctx.fillText('KEYWORDS', tx+6, ty+th+18);
+    if (tDraw<1) tDraw=Math.min(tDraw+0.007,1);
+    const drawn = tDraw*(TP.length-1);
+    ctx.globalAlpha=0.9; ctx.strokeStyle=BLUE; ctx.lineWidth=2;
+    ctx.lineCap='round'; ctx.lineJoin='round';
+    ctx.beginPath();
+    TP.forEach(([px,py],i) => {
+      const x=tx+10+px*tw, y=ty+8+py*(th-8);
+      if(i===0) ctx.moveTo(x,y);
+      else if(i<=Math.floor(drawn)+1) ctx.lineTo(x,y);
+    });
+    ctx.stroke();
+    TP.forEach(([px,py],i) => {
+      if(i>drawn) return;
+      const x=tx+10+px*tw, y=ty+8+py*(th-8);
+      const pulse=0.7+0.3*Math.sin(t*0.05+i);
+      ctx.globalAlpha=pulse;
+      ctx.fillStyle=DC[i];
+      ctx.shadowBlur=6; ctx.shadowColor=DC[i];
+      ctx.beginPath(); ctx.arc(x,y,3,0,Math.PI*2); ctx.fill();
+      ctx.shadowBlur=0;
+    });
+    ctx.globalAlpha=1;
+  }
+
+  /* Main loop — throttled to 20fps */
+  let frame=0, last=0;
+  const INTERVAL=1000/20;
+  function loop(now) {
+    requestAnimationFrame(loop);
+    if (now-last < INTERVAL) return;
+    last=now; frame++;
+    ctx.clearRect(0,0,W(),H());
+    drawGrid();
+    drawOrbs(frame);
+    drawScan();
+    drawCorners(frame);
+    drawParticles();
+    drawArrows();
+    drawLabels();
+    drawBars(frame);
+    drawTrend(frame);
+  }
+  requestAnimationFrame(loop);
+})();
+
+/* ── Role cycler — typewriter loop ── */
+(function() {
+  const roles = [
+    'Digital Marketer',
+    'SEO Specialist',
+    'Copy Writer',
+    'Graphics Designer',
+    'Social Media Manager'
+  ];
+  const el = document.getElementById('roleCycler');
+  if (!el) return;
+
+  let roleIdx = 0, charIdx = 0, deleting = false;
+  const PAUSE_FULL  = 1800; // ms to hold full word
+  const PAUSE_EMPTY = 400;  // ms pause before typing next
+  const TYPE_SPEED  = 70;   // ms per char typing
+  const DEL_SPEED   = 35;   // ms per char deleting
+
+  function tick() {
+    const current = roles[roleIdx];
+
+    if (!deleting) {
+      // typing
+      charIdx++;
+      el.textContent = current.slice(0, charIdx);
+      if (charIdx === current.length) {
+        // word complete — pause then delete
+        setTimeout(() => { deleting = true; tick(); }, PAUSE_FULL);
+        return;
+      }
+      setTimeout(tick, TYPE_SPEED);
+    } else {
+      // deleting
+      charIdx--;
+      el.textContent = current.slice(0, charIdx);
+      if (charIdx === 0) {
+        // word gone — move to next, pause then type
+        deleting = false;
+        roleIdx = (roleIdx + 1) % roles.length;
+        setTimeout(tick, PAUSE_EMPTY);
+        return;
+      }
+      setTimeout(tick, DEL_SPEED);
+    }
+  }
+
+  // Start after hero entrance animation settles
+  setTimeout(tick, 900);
+})();
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('vis'); revealObs.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal, .reveal-right, .reveal-scale, .sec-eyebrow').forEach(el => revealObs.observe(el));
+
+/* ── Stagger grid children ── */
+const staggerObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll(':scope > *').forEach((child, i) => {
+        child.style.transitionDelay = (i * 0.08) + 's';
+        child.classList.add('reveal');
+        setTimeout(() => child.classList.add('vis'), 10);
+      });
+      staggerObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.expertise-grid, .highlights-grid, .refs-grid, .academic-grid, .mockup-grid').forEach(el => staggerObs.observe(el));
+
+/* ── Topbar scroll ── */
+window.addEventListener('scroll', () => {
+  document.querySelector('.topbar').classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ── Stat counters ── */
+function animateCounter(el, target, suffix) {
+  const start = performance.now(), dur = 1200;
+  const update = now => {
+    const p = Math.min((now - start) / dur, 1);
+    el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target) + (suffix || '');
+    if (p < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    if (el.dataset.target) animateCounter(el, parseFloat(el.dataset.target), el.dataset.suffix || '');
+    counterObs.unobserve(el);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+/* ── Case study expand/collapse ── */
+function toggleCS(id) {
+  const details = document.getElementById(id + '-details');
+  const arrow   = document.getElementById(id + '-arrow');
+  const btn     = arrow.closest('.cs-read-btn');
+  const isOpen  = details.classList.contains('cs-details-open');
+  if (isOpen) {
+    details.classList.remove('cs-details-open');
+    arrow.textContent = '↓';
+    btn.textContent = '';
+    btn.appendChild(document.createTextNode('Read Case Study '));
+    btn.appendChild(arrow);
+  } else {
+    details.classList.add('cs-details-open');
+    arrow.textContent = '↑';
+    btn.textContent = '';
+    btn.appendChild(document.createTextNode('Close Case Study '));
+    btn.appendChild(arrow);
+  }
+}
+</script>
+</body>
+</html>
